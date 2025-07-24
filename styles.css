@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #1B1F23;
+  color: #ffffff;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.menu {
+  display: flex;
+  gap: 24px;
+}
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+}
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+  background: #ffffff;
+  content: '';
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  transition: 0.3s;
+}
+.menu-icon span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-icon span::before {
+  top: -10px;
+}
+.menu-icon span::after {
+  bottom: -10px;
+}
+
+/* BUTTONS */
+.btn-accent {
+  background: #0CE3AC;
+  color: #1B1F23;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.btn-main {
+  background: #0CE3AC;
+  color: #1B1F23;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.btn-outline {
+  border: 2px solid #0CE3AC;
+  color: #0CE3AC;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.btn-gold {
+  background: #FFD97C;
+  color: #1B1F23;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 0;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.hero-img img {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+.card {
+  background: #2A2F35;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 8px;
+}
+.card .price {
+  font-size: 1.5rem;
+  margin: 12px 0 16px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.95rem;
+}
+.social-links a {
+  color: #0CE3AC;
+}
+
+/* MAIN HEADINGS */
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+main p {
+  margin-bottom: 20px;
+}
+main ul {
+  margin-left: 20px;
+  line-height: 1.8;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #1B1F23;
+    display: none;
+    padding: 20px;
+    z-index: 10;
+  }
+  .menu li {
+    margin-bottom: 16px;
+  }
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
