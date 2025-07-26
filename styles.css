@@ -83,8 +83,8 @@ a {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .btn-main {
@@ -94,8 +94,8 @@ a {
   border: none;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
   border-radius: 6px;
+  display: inline-block;
   transition: background 0.3s ease;
 }
 
@@ -162,6 +162,49 @@ a {
   margin-bottom: 0.5rem;
 }
 
+/* Full width cards on mobile */
+@media (max-width: 600px) {
+  .card {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+/* === Contact Cards === */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: #2A2F35;
+  border: 2px solid #bfa251;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-card h3 {
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.contact-card p,
+.contact-card a {
+  color: #0CE3AC;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
 /* === Footer === */
 .footer {
   text-align: center;
@@ -176,7 +219,7 @@ a {
   margin: 0 0.5rem;
 }
 
-/* === Responsive === */
+/* === Responsive Enhancements === */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
