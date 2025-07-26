@@ -28,6 +28,12 @@ a {
   flex-wrap: wrap;
 }
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFD97C;
+}
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -114,8 +120,6 @@ a {
   color: #1B1F23;
 }
 
-}
-
 .hero-img img {
   width: 100%;
   max-width: 600px;
@@ -179,8 +183,9 @@ a {
   }
 
   .menu {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 1rem;
   }
