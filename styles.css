@@ -23,21 +23,17 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
   background: #2A2F35;
+  padding: 1rem 2rem;
   flex-wrap: wrap;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #FFD97C;
-}
-
 .menu {
-  list-style: none;
   display: flex;
-  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
@@ -45,11 +41,11 @@ a {
 .menu li a {
   color: #FFFFFF;
   font-weight: 500;
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .menu li a:hover {
-  color: #0CE3AC;
+  color: #FFD97C;
 }
 
 /* === Hero Section === */
