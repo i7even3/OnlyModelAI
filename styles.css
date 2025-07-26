@@ -119,14 +119,6 @@ a {
   background-color: #FFD97C;
   color: #1B1F23;
 }
-}
-
-.hero-img img {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 2rem;
-  border-radius: 6px;
-}
 
 /* === Sections === */
 .intro,
