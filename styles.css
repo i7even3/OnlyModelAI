@@ -18,7 +18,7 @@ a {
   padding: 2rem;
 }
 
-/* === Navigation: Horizontal Menu === */
+/* === Navigation === */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -28,10 +28,11 @@ a {
   flex-wrap: wrap;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.logo a {
   color: #FFD97C;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .menu {
@@ -93,8 +94,8 @@ a {
   padding: 0.9rem 2rem;
   border: none;
   font-weight: 600;
-  text-decoration: none;
   border-radius: 6px;
+  text-decoration: none;
   display: inline-block;
   transition: background 0.3s ease;
 }
@@ -217,6 +218,12 @@ a {
 .footer .social-links a {
   color: #FFD97C;
   margin: 0 0.5rem;
+}
+
+.footer-links a {
+  color: #FFD97C;
+  margin: 0 0.5rem;
+  font-size: 0.95rem;
 }
 
 /* === Responsive Enhancements === */
