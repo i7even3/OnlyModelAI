@@ -6,7 +6,6 @@
   <meta name="description" content="OnlyModelAI pricing plans — Starter, Deluxe and Mentorship"/>
   <title>Pricing | OnlyModelAI</title>
   <link rel="stylesheet" href="styles.css"/>
-  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
 </head>
 <body>
   <header class="nav">
@@ -36,7 +35,7 @@
           <li>Posting Templates</li>
           <li>Active Discord</li>
         </ul>
-        <button onclick="scrollToCheckout('starter')" class="btn-main">Join Starter</button>
+        <a href="https://paypal.me/i7even2/49.95?note=OnlyModelAI+Starter" target="_blank" class="btn-main">Join Starter</a>
       </div>
 
       <div class="card">
@@ -49,7 +48,7 @@
           <li>Swipe Files and Strategy Packs</li>
           <li>Content Creation Stack</li>
         </ul>
-        <button onclick="scrollToCheckout('deluxe')" class="btn-main">Get Deluxe</button>
+        <a href="https://paypal.me/i7even2/149.99?note=OnlyModelAI+Deluxe" target="_blank" class="btn-main">Get Deluxe</a>
       </div>
 
       <div class="card">
@@ -61,7 +60,7 @@
           <li>Custom Audit and Growth Plan</li>
           <li>Priority Access and Feedback</li>
         </ul>
-        <button onclick="scrollToCheckout('mentorship')" class="btn-main">Apply for Mentorship</button>
+        <a href="https://paypal.me/i7even2/499.99?note=OnlyModelAI+Mentorship" target="_blank" class="btn-main">Apply for Mentorship</a>
       </div>
     </div>
   </section>
@@ -90,28 +89,6 @@
     </table>
   </section>
 
-  <section id="checkout-section" class="container" style="margin-top: 4rem;">
-    <h2 style="color:#FFD97C; text-align:center;">Secure Checkout</h2>
-    <p style="text-align:center;">Complete your one time payment below. Instant access after payment.</p>
-
-    <div class="cards" style="margin-top:2rem;">
-      <div class="card" id="checkout-starter">
-        <h3>Starter Plan €49.95</h3>
-        <div id="paypal-starter-button"></div>
-      </div>
-
-      <div class="card" id="checkout-deluxe">
-        <h3>Deluxe Plan €149.99</h3>
-        <div id="paypal-deluxe-button"></div>
-      </div>
-
-      <div class="card" id="checkout-mentorship">
-        <h3>Mentorship Plan €499.99</h3>
-        <div id="paypal-mentorship-button"></div>
-      </div>
-    </div>
-  </section>
-
   <footer class="footer">
     <div class="footer-links" style="margin-bottom:1rem;">
       <a href="terms-and-conditions.html">Terms of Service</a> |
@@ -123,32 +100,6 @@
       <a href="#">Discord</a>
     </div>
   </footer>
-
-<script>
-function scrollToCheckout(plan) {
-  document.getElementById(`checkout-${plan}`).scrollIntoView({ behavior: 'smooth' });
-}
-
-const ref = new URLSearchParams(window.location.search).get('ref') || 'direct';
-
-function renderPayPal(id, price) {
-  paypal.Buttons({
-    style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'paypal' },
-    createOrder: (data, actions) => actions.order.create({
-      purchase_units: [{ amount: { value: price }, custom_id: ref }]
-    }),
-    onApprove: (data, actions) => actions.order.capture().then(details => {
-      alert(`Thanks ${details.payer.name.given_name}, your payment was successful.`);
-      window.location.href = "thank-you.html";
-    })
-  }).render(id);
-}
-
-renderPayPal('#paypal-starter-button', '49.95');
-renderPayPal('#paypal-deluxe-button', '149.99');
-renderPayPal('#paypal-mentorship-button', '499.99');
-</script>
-
 </body>
 </html>
 
