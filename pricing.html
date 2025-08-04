@@ -6,6 +6,7 @@
   <meta name="description" content="OnlyModelAI pricing plans — Starter, Deluxe and Mentorship"/>
   <title>Pricing | OnlyModelAI</title>
   <link rel="stylesheet" href="styles.css"/>
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=EUR"></script>
 </head>
 <body>
   <header class="nav">
@@ -35,7 +36,7 @@
           <li>Posting Templates</li>
           <li>Active Discord</li>
         </ul>
-        <a href="https://payhip.com/b/k0cWM" class="btn-main">Join Starter</a>
+        <button onclick="scrollToCheckout('starter')" class="btn-main">Join Starter</button>
       </div>
 
       <div class="card">
@@ -43,12 +44,12 @@
         <p>€149.99 one time</p>
         <ul>
           <li>Everything in Starter</li>
-          <li>1x Access key to discord </li>
+          <li>1x Access key to discord</li>
           <li>Prompt Archive Unlocked</li>
           <li>Swipe Files and Strategy Packs</li>
           <li>Content Creation Stack</li>
         </ul>
-        <a href="https://payhip.com/b/JGuLD" class="btn-main">Get Deluxe</a>
+        <button onclick="scrollToCheckout('deluxe')" class="btn-main">Get Deluxe</button>
       </div>
 
       <div class="card">
@@ -60,34 +61,56 @@
           <li>Custom Audit and Growth Plan</li>
           <li>Priority Access and Feedback</li>
         </ul>
-        <a href="https://payhip.com/b/yenVZ" class="btn-main">Apply for Mentorship</a>
+        <button onclick="scrollToCheckout('mentorship')" class="btn-main">Apply for Mentorship</button>
       </div>
     </div>
   </section>
 
-<section class="comparison-table container">
-  <h2 style="text-align:center; color: #FFD97C;">Compare Plans</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Feature</th>
-        <th>Starter</th>
-        <th>Deluxe</th>
-        <th>Mentorship</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>14-Day Launch Plan</td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td></tr>
-      <tr><td>Prompt Outline</td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td></tr>
-      <tr><td>Posting Templates</td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td></tr>
-      <tr><td>Free Tools</td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td></tr>
-      <tr><td>Prompt Archive</td><td>❌</td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td></tr>
-      <tr><td>Lifetime Access</td><td>❌</td><td><span class="checkmark">✅</span></td><td><span class="checkmark">✅</span></td></tr>
-      <tr><td>1:1 Mentorship</td><td>❌</td><td>❌</td><td><span class="checkmark">✅</span></td></tr>
-      <tr><td>Private Support</td><td>❌</td><td>❌</td><td><span class="checkmark">✅</span></td></tr>
-    </tbody>
-  </table>
-</section>
+  <section class="comparison-table container">
+    <h2 style="text-align:center; color: #FFD97C;">Compare Plans</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Starter</th>
+          <th>Deluxe</th>
+          <th>Mentorship</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>14-Day Launch Plan</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Prompt Outline</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Posting Templates</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Free Tools</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Prompt Archive</td><td>❌</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Lifetime Access</td><td>❌</td><td>✅</td><td>✅</td></tr>
+        <tr><td>1:1 Mentorship</td><td>❌</td><td>❌</td><td>✅</td></tr>
+        <tr><td>Private Support</td><td>❌</td><td>❌</td><td>✅</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="checkout-section" class="container" style="margin-top: 4rem;">
+    <h2 style="color:#FFD97C; text-align:center;">Secure Checkout</h2>
+    <p style="text-align:center;">Complete your one time payment below. Instant access after payment.</p>
+
+    <div class="cards" style="margin-top:2rem;">
+      <div class="card" id="checkout-starter">
+        <h3>Starter Plan €49.95</h3>
+        <div id="paypal-starter-button"></div>
+      </div>
+
+      <div class="card" id="checkout-deluxe">
+        <h3>Deluxe Plan €149.99</h3>
+        <div id="paypal-deluxe-button"></div>
+      </div>
+
+      <div class="card" id="checkout-mentorship">
+        <h3>Mentorship Plan €499.99</h3>
+        <div id="paypal-mentorship-button"></div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="footer-links" style="margin-bottom:1rem;">
@@ -97,9 +120,35 @@
     <p>© 2025 OnlyModelAI. All rights reserved.</p>
     <div class="social-links">
       <a href="https://instagram.com/aigirl.launch" target="_blank">Instagram</a> |
-      <a href="https://payhip.com/OnlyModelAI" target="_blank">Payhip</a> |
       <a href="#">Discord</a>
     </div>
   </footer>
+
+<script>
+function scrollToCheckout(plan) {
+  document.getElementById(`checkout-${plan}`).scrollIntoView({ behavior: 'smooth' });
+}
+
+const ref = new URLSearchParams(window.location.search).get('ref') || 'direct';
+
+function renderPayPal(id, price) {
+  paypal.Buttons({
+    style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'paypal' },
+    createOrder: (data, actions) => actions.order.create({
+      purchase_units: [{ amount: { value: price }, custom_id: ref }]
+    }),
+    onApprove: (data, actions) => actions.order.capture().then(details => {
+      alert(`Thanks ${details.payer.name.given_name}, your payment was successful.`);
+      window.location.href = "thank-you.html";
+    })
+  }).render(id);
+}
+
+renderPayPal('#paypal-starter-button', '49.95');
+renderPayPal('#paypal-deluxe-button', '149.99');
+renderPayPal('#paypal-mentorship-button', '499.99');
+</script>
+
 </body>
 </html>
+
