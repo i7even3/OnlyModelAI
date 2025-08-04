@@ -35,7 +35,7 @@
           <li>Posting Templates</li>
           <li>Active Discord</li>
         </ul>
-        <a href="https://paypal.me/i7even2/49.95?note=OnlyModelAI+Starter" target="_blank" class="btn-main">Join Starter</a>
+        <button onclick="handlePurchase('Starter')" class="btn-main">Join Starter</button>
       </div>
 
       <div class="card">
@@ -48,7 +48,7 @@
           <li>Swipe Files and Strategy Packs</li>
           <li>Content Creation Stack</li>
         </ul>
-        <a href="https://paypal.me/i7even2/149.99?note=OnlyModelAI+Deluxe" target="_blank" class="btn-main">Get Deluxe</a>
+        <button onclick="handlePurchase('Deluxe')" class="btn-main">Get Deluxe</button>
       </div>
 
       <div class="card">
@@ -60,7 +60,7 @@
           <li>Custom Audit and Growth Plan</li>
           <li>Priority Access and Feedback</li>
         </ul>
-        <a href="https://paypal.me/i7even2/499.99?note=OnlyModelAI+Mentorship" target="_blank" class="btn-main">Apply for Mentorship</a>
+        <button onclick="handlePurchase('Mentorship')" class="btn-main">Apply for Mentorship</button>
       </div>
     </div>
   </section>
@@ -100,6 +100,61 @@
       <a href="#">Discord</a>
     </div>
   </footer>
+
+<script>
+const SUPABASE_URL = "https://gaprinisswfsmmzfgitf.supabase.co";
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdhcHJpbmlzc3dmc21temZnaXRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQzMzUyMjksImV4cCI6MjA2OTkxMTIyOX0.pyq_gCYsZjNnSW_RHm9LUaWal-nuLo5rzM3N0mFSm5M";
+
+const urlParams = new URLSearchParams(window.location.search);
+const ref = urlParams.get("ref");
+if (ref) localStorage.setItem("ref", ref);
+const storedRef = localStorage.getItem("ref") || "direct";
+const userAgent = navigator.userAgent;
+
+fetch("https://api.ipify.org?format=json").then(res => res.json()).then(({ ip }) => {
+  fetch(`${SUPABASE_URL}/rest/v1/views`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": SUPABASE_KEY,
+      "Authorization": `Bearer ${SUPABASE_KEY}`
+    },
+    body: JSON.stringify({
+      referrer: storedRef,
+      ip: ip,
+      user_agent: userAgent
+    })
+  });
+});
+
+function handlePurchase(plan) {
+  const note = `OnlyModelAI+${plan}+${storedRef}`;
+  const paypalLink = `https://paypal.me/i7even2/${getPrice(plan)}?note=${note}`;
+  fetch(`${SUPABASE_URL}/rest/v1/sales`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "apikey": SUPABASE_KEY,
+      "Authorization": `Bearer ${SUPABASE_KEY}`
+    },
+    body: JSON.stringify({
+      referrer: storedRef,
+      plan: plan,
+      note: note
+    })
+  }).finally(() => {
+    window.location.href = "thank-you.html";
+    window.open(paypalLink, "_blank");
+  });
+}
+
+function getPrice(plan) {
+  if (plan === "Starter") return "49.95";
+  if (plan === "Deluxe") return "149.99";
+  if (plan === "Mentorship") return "499.99";
+  return "0";
+}
+</script>
 </body>
 </html>
 
