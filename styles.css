@@ -12,10 +12,15 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
+  text-align: center;
 }
 
 /* === Navigation === */
@@ -163,7 +168,6 @@ a {
   margin-bottom: 0.5rem;
 }
 
-/* Full width cards on mobile */
 @media (max-width: 600px) {
   .card {
     max-width: none;
@@ -271,7 +275,7 @@ a {
   background-color: #1e1e1e;
 }
 
-/* === Payment Pages (Starter / Deluxe / Mentorship) === */
+/* === Payment Pages === */
 .plan-title {
   font-size: 2rem;
   color: #FFD97C;
