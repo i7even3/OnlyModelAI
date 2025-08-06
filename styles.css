@@ -269,6 +269,49 @@ a {
 .comparison-table tbody tr:nth-child(odd) {
   background-color: #1e1e1e;
 }
+/* === Starter Plan Payment Page Styles === */
+.plan-title {
+  font-size: 2rem;
+  color: #FFD97C;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.payment-section {
+  margin-top: 2.5rem;
+}
+
+.crypto-option {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #2A2F35;
+  border-radius: 6px;
+}
+
+code {
+  display: block;
+  background-color: #111;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  color: #FFD97C;
+  font-family: monospace;
+  word-break: break-word;
+}
+
+.instruction {
+  margin-top: 2rem;
+}
+
+.instructions-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
 
 /* === Responsive Enhancements === */
 @media (max-width: 768px) {
