@@ -397,3 +397,20 @@ code {
     align-items: center;
   }
 }
+
+/* === Home Page Specific Card Styles === */
+body.index .features .card {
+  max-width: 320px;
+  flex: 1 1 280px;
+  padding: 1.5rem;
+  background: #2A2F35;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+body.index .features .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 12px rgba(255, 217, 124, 0.25);
+}
