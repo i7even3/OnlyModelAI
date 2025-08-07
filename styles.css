@@ -102,13 +102,15 @@ a:hover {
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.3s ease;
+  transition: all 0.4s ease;
   font-size: 1rem;
   cursor: pointer;
+  box-shadow: 0 0 0px rgba(255, 217, 124, 0.6);
 }
 
 .btn-main:hover {
   background: #e6c76f;
+  box-shadow: 0 0 12px rgba(255, 217, 124, 0.7), 0 0 24px rgba(255, 217, 124, 0.5);
 }
 
 .btn-outline {
@@ -120,12 +122,13 @@ a:hover {
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
   background: #FFD97C;
   color: #1B1F23;
+  box-shadow: 0 0 12px rgba(255, 217, 124, 0.7), 0 0 24px rgba(255, 217, 124, 0.5);
 }
 
 .hero-img img {
@@ -156,8 +159,9 @@ a:hover {
   padding: 1.5rem;
   border-radius: 6px;
   max-width: 300px;
-  flex: 1;
+  flex: 1 1 300px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .card ul {
@@ -244,6 +248,7 @@ a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 .footer-row {
   display: flex;
   justify-content: space-between;
@@ -273,6 +278,7 @@ a:hover {
   padding: 2px 4px;
   border-radius: 4px;
 }
+
 /* === Comparison Table === */
 .comparison-table table {
   width: 100%;
