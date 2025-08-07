@@ -260,11 +260,18 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .payment-logos img {
   height: 24px;
+  width: auto;
   object-fit: contain;
+  background-color: transparent;
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 /* === Comparison Table === */
 .comparison-table table {
