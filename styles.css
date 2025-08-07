@@ -145,7 +145,7 @@ a:hover {
   margin-top: 3rem;
 }
 
-/* === Cards === */
+/* === Cards (default style) === */
 .cards,
 .features {
   display: flex;
@@ -158,11 +158,10 @@ a:hover {
   background: #2A2F35;
   padding: 1.5rem;
   border-radius: 6px;
-  width: 100%;
   max-width: 320px;
-  text-align: center;
   flex: 1 1 300px;
-  box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .card ul {
@@ -173,6 +172,21 @@ a:hover {
 
 .card ul li {
   margin-bottom: 0.5rem;
+}
+
+/* === Cards per page overrides === */
+.faq .card {
+  max-width: 600px;
+}
+
+.contact .card {
+  max-width: 400px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 100% !important;
+  }
 }
 
 /* === Contact Cards === */
@@ -387,9 +401,5 @@ code {
   .features {
     flex-direction: column;
     align-items: center;
-  }
-
-  .card {
-    max-width: 100%;
   }
 }
