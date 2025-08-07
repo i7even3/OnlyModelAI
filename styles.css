@@ -53,6 +53,7 @@ a:hover {
 .menu li a {
   color: #FFFFFF;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .menu li a:hover {
@@ -130,11 +131,17 @@ a:hover {
   box-shadow: 0 0 12px rgba(255, 217, 124, 0.7), 0 0 24px rgba(255, 217, 124, 0.5);
 }
 
+.hero-img {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
 .hero-img img {
   width: 100%;
   max-width: 600px;
-  margin-top: 2rem;
   border-radius: 6px;
+  max-height: 300px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -145,7 +152,7 @@ a:hover {
   margin-top: 3rem;
 }
 
-/* === Cards Global === */
+/* === Cards (Default) === */
 .cards,
 .features {
   display: flex;
@@ -162,6 +169,12 @@ a:hover {
   flex: 1 1 300px;
   text-align: center;
   margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 12px rgba(255, 217, 124, 0.25);
 }
 
 .card ul {
@@ -174,20 +187,18 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* === Index Page Card Style === */
+/* === Page-Specific Card Styles === */
 body.index .features .card {
   max-width: 320px;
   flex: 1 1 280px;
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin: 0 auto;
-  background: #2A2F35;
-  transition: transform 0.3s ease;
 }
 
-body.index .features .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 12px rgba(255, 217, 124, 0.25);
+body.faq .card {
+  max-width: 100%;
+}
+
+body.contact .card {
+  max-width: 400px;
 }
 
 /* === Contact Cards === */
@@ -214,6 +225,7 @@ body.index .features .card:hover {
 }
 
 .contact-card h3 {
+  color: #FFFFFF;
   margin-bottom: 1rem;
 }
 
@@ -233,15 +245,27 @@ body.index .features .card:hover {
   background-color: #2A2F35;
 }
 
+.footer .social-links a {
+  color: #FFD97C;
+  margin: 0 0.5rem;
+}
+
 .footer-links a {
   color: #FFD97C;
   margin: 0 0.5rem;
   font-size: 0.95rem;
 }
 
-.footer .social-links a {
-  color: #FFD97C;
-  margin: 0 0.5rem;
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  font-size: 0.95rem;
 }
 
 .payment-logos {
@@ -260,6 +284,98 @@ body.index .features .card:hover {
   background-color: transparent;
   padding: 2px 4px;
   border-radius: 4px;
+}
+
+/* === Comparison Table === */
+.comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #333;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #333;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.comparison-table th {
+  background-color: #FFD97C;
+  color: #000;
+  font-weight: 600;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.comparison-table tbody tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
+/* === Payment Pages === */
+.plan-title {
+  font-size: 2rem;
+  color: #FFD97C;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.price {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.payment-section {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.payment-section .btn-main {
+  margin-top: 1rem;
+}
+
+.crypto-option {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #2A2F35;
+  border-radius: 6px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+code {
+  display: block;
+  background-color: #111;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  color: #FFD97C;
+  font-family: monospace;
+  word-break: break-word;
+}
+
+.instruction {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.instructions-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* === Responsive === */
@@ -287,6 +403,6 @@ body.index .features .card:hover {
   }
 
   .card {
-    max-width: 100%;
+    width: 100%;
   }
 }
