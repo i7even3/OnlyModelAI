@@ -244,7 +244,28 @@ a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
 
+.footer-links {
+  font-size: 0.95rem;
+}
+
+.payment-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.payment-logos img {
+  height: 24px;
+  object-fit: contain;
+}
 /* === Comparison Table === */
 .comparison-table table {
   width: 100%;
