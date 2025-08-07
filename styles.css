@@ -221,7 +221,11 @@ a:hover {
   background-color: #2A2F35;
 }
 
-.footer .social-links a,
+.footer .social-links a {
+  color: #FFD97C;
+  margin: 0 0.5rem;
+}
+
 .footer-links a {
   color: #FFD97C;
   margin: 0 0.5rem;
