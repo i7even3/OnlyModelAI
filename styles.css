@@ -102,16 +102,13 @@ a:hover {
   border-radius: 6px;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.4s ease;
+  transition: background 0.3s ease;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 0 0px rgba(255, 217, 124, 0.7);
 }
 
 .btn-main:hover {
   background: #e6c76f;
-  box-shadow: 0 0 12px rgba(255, 217, 124, 0.9);
-  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -143,7 +140,6 @@ a:hover {
 .features,
 .cards {
   margin-top: 3rem;
-  text-align: center;
 }
 
 /* === Cards === */
@@ -160,7 +156,7 @@ a:hover {
   padding: 1.5rem;
   border-radius: 6px;
   max-width: 300px;
-  flex: 1 1 300px;
+  flex: 1;
   text-align: center;
 }
 
@@ -181,6 +177,41 @@ a:hover {
   }
 }
 
+/* === Contact Cards === */
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-card {
+  background: #2A2F35;
+  border: 2px solid #bfa251;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-card h3 {
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.contact-card p,
+.contact-card a {
+  color: #0CE3AC;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
 /* === Footer === */
 .footer {
   text-align: center;
@@ -195,28 +226,46 @@ a:hover {
   margin: 0 0.5rem;
 }
 
-.footer-links {
-  font-size: 0.95rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .footer-links a {
   color: #FFD97C;
-  margin: 0.25rem 0;
+  margin: 0 0.5rem;
+  font-size: 0.95rem;
 }
 
-.footer .payment-logos {
+.hero-img {
   display: flex;
   justify-content: center;
+  margin: 2rem 0;
+}
+
+.hero-img img {
+  max-height: 300px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  font-size: 0.95rem;
+}
+
+.payment-logos {
+  display: flex;
+  align-items: center;
   gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 1rem;
 }
 
-.footer .payment-logos img {
+.payment-logos img {
   height: 24px;
   width: auto;
   object-fit: contain;
@@ -224,7 +273,6 @@ a:hover {
   padding: 2px 4px;
   border-radius: 4px;
 }
-
 /* === Comparison Table === */
 .comparison-table table {
   width: 100%;
@@ -337,16 +385,6 @@ code {
 
   .cards,
   .features {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-row {
     flex-direction: column;
     align-items: center;
   }
