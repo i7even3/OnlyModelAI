@@ -144,7 +144,20 @@ a:hover {
   max-height: 300px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-
+body.contact .contact-card {
+  border: none; /* removes gold outline */
+  background: #2A2F35;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
 /* === Sections === */
 .intro,
 .features,
