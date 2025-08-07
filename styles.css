@@ -93,9 +93,7 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* === Buttons === */
-.btn-main,
-.payment-section .btn-main {
+.btn-main {
   background: #FFD97C;
   color: #1B1F23;
   padding: 0.9rem 2rem;
@@ -103,19 +101,10 @@ a:hover {
   font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   transition: background 0.3s ease;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 1rem;
-  gap: 0.5rem;
-}
-
-.btn-main img {
-  height: 18px;
-  vertical-align: middle;
 }
 
 .btn-main:hover {
@@ -139,18 +128,11 @@ a:hover {
   color: #1B1F23;
 }
 
-/* === Hero Image === */
-.hero-img {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
 .hero-img img {
-  max-height: 300px;
-  width: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+  border-radius: 6px;
 }
 
 /* === Sections === */
@@ -246,6 +228,19 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.hero-img {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.hero-img img {
+  max-height: 300px;
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* === Comparison Table === */
 .comparison-table table {
   width: 100%;
@@ -297,6 +292,10 @@ a:hover {
   text-align: center;
 }
 
+.payment-section .btn-main {
+  margin-top: 1rem;
+}
+
 .crypto-option {
   margin-top: 1.5rem;
   padding: 1rem;
@@ -332,21 +331,6 @@ code {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* === Payment Logos === */
-.payment-logos {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.payment-logos img {
-  height: 32px;
-  object-fit: contain;
-  filter: brightness(0.9);
 }
 
 /* === Responsive Enhancements === */
