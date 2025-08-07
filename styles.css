@@ -1,3 +1,5 @@
+
+
 /* === Global Styles === */
 body {
   margin: 0;
@@ -145,7 +147,7 @@ a:hover {
   margin-top: 3rem;
 }
 
-/* === Cards (default style) === */
+/* === Cards === */
 .cards,
 .features {
   display: flex;
@@ -158,7 +160,7 @@ a:hover {
   background: #2A2F35;
   padding: 1.5rem;
   border-radius: 6px;
-  max-width: 320px;
+  max-width: 300px;
   flex: 1 1 300px;
   text-align: center;
   margin: 0 auto;
@@ -174,18 +176,10 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* === Cards per page overrides === */
-.faq .card {
-  max-width: 600px;
-}
-
-.contact .card {
-  max-width: 400px;
-}
-
 @media (max-width: 600px) {
   .card {
-    max-width: 100% !important;
+    max-width: none;
+    width: 100%;
   }
 }
 
