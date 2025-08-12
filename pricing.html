@@ -6,6 +6,17 @@
   <meta name="description" content="OnlyModelAI pricing plans — Starter, Deluxe and Mentorship"/>
   <title>Pricing | OnlyModelAI</title>
   <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* minimal add-ons for the alt-pay dropdowns */
+    .alt-pay { margin-top: .75rem; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; background: rgba(255,255,255,.03); overflow: hidden; }
+    .alt-pay > summary { cursor: pointer; padding: 10px 12px; font-weight: 600; list-style: none; }
+    .alt-pay > summary::-webkit-details-marker { display: none; }
+    .alt-pay > summary::after { content: "▼"; float: right; font-size: 12px; opacity: .7; transition: transform .15s ease; }
+    .alt-pay[open] > summary::after { transform: rotate(-180deg); }
+    .alt-pay-content { padding: 12px; border-top: 1px solid rgba(255,255,255,.08); display: grid; gap: 8px; }
+    .btn-alt { display: inline-block; text-align: center; padding: 10px 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.05); color: inherit; text-decoration: none; }
+    .btn-main { display: inline-block; text-align: center; padding: 12px 16px; border-radius: 10px; background: #FFD97C; color: #111; font-weight: 700; text-decoration: none; width: 100%; }
+  </style>
 </head>
 <body>
   <header class="nav">
@@ -25,6 +36,8 @@
   <section class="container">
     <h1>Choose Your Plan</h1>
     <div class="cards">
+
+      <!-- STARTER -->
       <div class="card">
         <h2>Starter</h2>
         <p>€49.95 one time</p>
@@ -35,11 +48,25 @@
           <li>Posting Templates</li>
           <li>Active Discord</li>
         </ul>
-        <a href="starter.html" class="btn-main">
-          <alt="PayPal"> Join Starter
-        </a>
+
+        <!-- Main checkout: Gumroad -->
+        <a
+          href="https://aigirlmethod.gumroad.com/l/zlyjw"
+          class="btn-main" target="_blank" rel="noopener"
+          aria-label="Buy Starter on Gumroad"
+        >Join Starter</a>
+
+        <!-- Alternatives -->
+        <details class="alt-pay">
+          <summary>Alternative payment methods</summary>
+          <div class="alt-pay-content">
+            <a class="btn-alt" href="https://paypal.me/your-starter-link" target="_blank" rel="noopener" aria-label="Pay with PayPal (Starter)">Pay with PayPal</a>
+            <a class="btn-alt" href="https://your-crypto-checkout.example/starter" target="_blank" rel="noopener" aria-label="Pay with Crypto (Starter)">Pay with Crypto</a>
+          </div>
+        </details>
       </div>
 
+      <!-- DELUXE -->
       <div class="card">
         <h2>Deluxe</h2>
         <p>€149.99 one time</p>
@@ -50,11 +77,25 @@
           <li>Swipe Files and Strategy Packs</li>
           <li>Content Creation Stack</li>
         </ul>
-        <a href="deluxe.html" class="btn-main">
-           Get Deluxe
-        </a>
+
+        <!-- Main checkout: Gumroad -->
+        <a
+          href="https://aigirlmethod.gumroad.com/l/ckzui"
+          class="btn-main" target="_blank" rel="noopener"
+          aria-label="Buy Deluxe on Gumroad"
+        >Get Deluxe</a>
+
+        <!-- Alternatives -->
+        <details class="alt-pay">
+          <summary>Alternative payment methods</summary>
+          <div class="alt-pay-content">
+            <a class="btn-alt" href="https://paypal.me/your-deluxe-link" target="_blank" rel="noopener" aria-label="Pay with PayPal (Deluxe)">Pay with PayPal</a>
+            <a class="btn-alt" href="https://your-crypto-checkout.example/deluxe" target="_blank" rel="noopener" aria-label="Pay with Crypto (Deluxe)">Pay with Crypto</a>
+          </div>
+        </details>
       </div>
 
+      <!-- MENTORSHIP -->
       <div class="card">
         <h2>Mentorship</h2>
         <p>€499.99 one time</p>
@@ -64,10 +105,24 @@
           <li>Custom Audit and Growth Plan</li>
           <li>Priority Access and Feedback</li>
         </ul>
-        <a href="mentor.html" class="btn-main">
-         Apply for Mentorship
-        </a>
+
+        <!-- Main checkout: Gumroad -->
+        <a
+          href="https://aigirlmethod.gumroad.com/l/Mentor"
+          class="btn-main" target="_blank" rel="noopener"
+          aria-label="Apply for Mentorship on Gumroad"
+        >Apply for Mentorship</a>
+
+        <!-- Alternatives -->
+        <details class="alt-pay">
+          <summary>Alternative payment methods</summary>
+          <div class="alt-pay-content">
+            <a class="btn-alt" href="https://paypal.me/your-mentorship-link" target="_blank" rel="noopener" aria-label="Pay with PayPal (Mentorship)">Pay with PayPal</a>
+            <a class="btn-alt" href="https://your-crypto-checkout.example/mentorship" target="_blank" rel="noopener" aria-label="Pay with Crypto (Mentorship)">Pay with Crypto</a>
+          </div>
+        </details>
       </div>
+
     </div>
   </section>
 
@@ -95,29 +150,27 @@
     </table>
   </section>
 
- <footer class="footer">
-  <div class="footer-links" style="margin-bottom: 1rem;">
-    <a href="terms-and-conditions.html">Terms of Service</a> |
-    <a href="privacy-policy.html">Privacy Policy</a>
-  </div>
+  <footer class="footer">
+    <div class="footer-links" style="margin-bottom: 1rem;">
+      <a href="terms-and-conditions.html">Terms of Service</a> |
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
 
-  <div class="payment-logos">
-    <img src="images/paypal-logo.png" alt="PayPal" />
-    <img src="images/mastercard-logo.png" alt="Mastercard" />
-    <img src="images/amex-logo.png" alt="American Express" />
-    <img src="images/applepay-logo.png" alt="Apple Pay" />
-    <img src="images/googlepay-logo.png" alt="Google Pay" />
-  </div>
+    <div class="payment-logos">
+      <img src="images/paypal-logo.png" alt="PayPal" />
+      <img src="images/mastercard-logo.png" alt="Mastercard" />
+      <img src="images/amex-logo.png" alt="American Express" />
+      <img src="images/applepay-logo.png" alt="Apple Pay" />
+      <img src="images/googlepay-logo.png" alt="Google Pay" />
+    </div>
 
-  <p style="margin-top: 1rem;">© 2025 OnlyModelAI. All rights reserved.</p>
+    <p style="margin-top: 1rem;">© 2025 OnlyModelAI. All rights reserved.</p>
 
-  <div class="social-links" style="margin-top: 0.5rem;">
-    <a href="https://instagram.com/aigirl.launch" target="_blank">Instagram</a> |
-    <a href="https://payhip.com/OnlyModelAI" target="_blank">Payhip</a> |
-    <a href="#">Discord</a>
-  </div>
-</footer>
+    <div class="social-links" style="margin-top: 0.5rem;">
+      <a href="https://instagram.com/aigirl.launch" target="_blank" rel="noopener">Instagram</a> |
+      <a href="https://payhip.com/OnlyModelAI" target="_blank" rel="noopener">Payhip</a> |
+      <a href="#">Discord</a>
+    </div>
+  </footer>
 </body>
 </html>
-
-
