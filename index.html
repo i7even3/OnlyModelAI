@@ -7,6 +7,78 @@
   <title>OnlyModelAI | Home</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Clarity + Referral tracking -->
+<script>
+/* Microsoft Clarity */
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "su9d6i4k9o");
+
+/* Referral tracking */
+(function () {
+  var COOKIE_NAME = "referral_code";
+  var COOKIE_DAYS = 90;
+
+  function setCookie(name, value, days) {
+    var d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + d.toUTCString() + "; path=/; SameSite=Lax";
+  }
+  function getCookie(name) {
+    var m = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+    return m ? decodeURIComponent(m[2]) : null;
+  }
+  function storeRef(value) {
+    if (!value) return;
+    localStorage.setItem(COOKIE_NAME, value);
+    setCookie(COOKIE_NAME, value, COOKIE_DAYS);
+    if (typeof window.clarity === "function") {
+      try { window.clarity("set", "referral_code", value); } catch(e) {}
+    }
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  // Detect any name after ?ref= (also supports ?aff= or ?affiliate=)
+  var ref = params.get("ref") || params.get("aff") || params.get("affiliate");
+  if (ref) storeRef(ref);
+
+  // Helpers you can use later
+  window.OMAFF = {
+    getRef: function(){ return getCookie(COOKIE_NAME) || localStorage.getItem(COOKIE_NAME) || null; },
+    setRef: storeRef,
+    appendRefToLinks: function(root){
+      var code = OMAFF.getRef();
+      if (!code) return;
+      var scope = root || document;
+      scope.querySelectorAll('a[data-append-ref]').forEach(function(a){
+        try {
+          var u = new URL(a.href, window.location.origin);
+          if (!u.searchParams.get("ref") || a.hasAttribute("data-ref-override")) {
+            u.searchParams.set("ref", code);
+          }
+          a.href = u.toString();
+        } catch(e){}
+      });
+    },
+    fillRefFields: function(root){
+      var code = OMAFF.getRef();
+      if (!code) return;
+      var scope = root || document;
+      scope.querySelectorAll('input[name="ref"], input[data-ref-field]').forEach(function(inp){
+        inp.value = code;
+      });
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function(){
+    OMAFF.appendRefToLinks();
+    OMAFF.fillRefFields();
+  });
+})();
+</script>
+
 </head>
 <body class="index">
   <header class="nav">
