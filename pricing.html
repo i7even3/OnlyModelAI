@@ -3,35 +3,34 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="OnlyModelAI pricing plans — Starter, Deluxe and Mentorship"/>
+  <meta name="description" content="OnlyModelAI pricing plans — Starter, Deluxe and Mentorship."/>
   <title>Pricing | OnlyModelAI</title>
   <link rel="stylesheet" href="styles.css"/>
 
   <!-- Microsoft Clarity Heatmap Tracking -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "su9d6i4k9o");
   </script>
 
-  <!-- Referral Tracking -->
+  <!-- Referral capture + auto-append to Gumroad links -->
   <script>
     (function () {
-      const params = new URLSearchParams(window.location.search);
-      const ref = params.get('ref');
+      const qs = new URLSearchParams(location.search);
+      const ref = qs.get('ref');
       if (ref) localStorage.setItem('referral', ref);
 
-      // append ?ref= to outbound Gumroad links if present
-      window.addEventListener('DOMContentLoaded', function () {
-        const referral = localStorage.getItem('referral');
-        if (!referral) return;
+      addEventListener('DOMContentLoaded', () => {
+        const stored = localStorage.getItem('referral');
+        if (!stored) return;
         document.querySelectorAll('a[data-append-ref="true"]').forEach(a => {
           try {
             const u = new URL(a.href);
             if (!u.searchParams.get('ref')) {
-              u.searchParams.set('ref', referral);
+              u.searchParams.set('ref', stored);
               a.href = u.toString();
             }
           } catch(e){}
@@ -40,29 +39,83 @@
     })();
   </script>
 
-   }
+  <!-- Minimal overrides (keeps your existing styles.css) -->
+  <style>
+    /* equal-height cards + space for badge */
+    .cards{ align-items:stretch; }
+    .card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height:560px;
+      padding-top:40px; /* ensures badge never overlaps title */
+    }
+    .card h2{ margin-top:0; }
+    .card ul{ line-height:1.55; }
 
+    /* deluxe highlight (gold glow) */
+    .card--featured{
+      border:1px solid rgba(255,217,124,.65);
+      box-shadow:
+        0 0 18px rgba(255,217,124,.48),
+        0 0 44px rgba(255,217,124,.36),
+        0 18px 50px rgba(0,0,0,.55);
+      z-index:1;
+    }
     /* best seller badge: top-left + glow */
     .card--featured .badge{
-      position: absolute;
-      top: 12px;
-      left: 14px;           /* moved to top-left */
-      right: auto;
-      transform: none;
-      z-index: 3;
-      background: #FFD97C;
-      color: #111;
-      font-weight: 800;
-      font-size: .78rem;
-      padding: 6px 12px;
-      border-radius: 8px;
-      text-transform: lowercase;
+      position:absolute;
+      top:12px;
+      left:14px;
+      right:auto;
+      transform:none;
+      z-index:3;
+      background:#FFD97C;
+      color:#111;
+      font-weight:800;
+      font-size:.78rem;
+      padding:6px 12px;
+      border-radius:8px;
+      text-transform:lowercase;
       box-shadow:
-        0 0 10px rgba(255,217,124,.9),
-        0 0 24px rgba(255,217,124,.6);
+        0 0 12px rgba(255,217,124,.9),
+        0 0 26px rgba(255,217,124,.6);
     }
 
-   
+    /* CTA alignment */
+    .card-footer{ margin-top:auto; display:flex; flex-direction:column; gap:12px; }
+    .btn-main{
+      display:block;
+      width:100%;
+      max-width:380px;
+      margin:0 auto;
+      padding:14px 18px;
+      border-radius:10px;
+    }
+
+    /* alt-pay button look */
+    .alt-pay summary{ cursor:pointer; }
+    .alt-pay-content .btn-alt{
+      display:block;
+      text-align:center;
+      margin-top:8px;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      text-decoration:none;
+    }
+    .alt-pay-content .btn-alt:hover{ background:rgba(255,255,255,.10); }
+
+    /* comparison table (checks/red X only here) */
+    .comparison-table h2{ color:#FFD97C; text-align:center; }
+    .comparison-table table{ width:100%; border-collapse:collapse; overflow:hidden; border-radius:10px; background:rgba(255,255,255,.03); }
+    .comparison-table th, .comparison-table td{ padding:12px; text-align:center; border:1px solid rgba(255,255,255,.08); }
+    .comparison-table th{ background:rgba(255,255,255,.06); }
+    .comparison-table td.green{ color:#2ecc71; font-weight:700; }
+    .comparison-table td.red{ color:#e74c3c; font-weight:700; }
+  </style>
 </head>
 <body>
   <header class="nav">
@@ -84,7 +137,7 @@
 
     <div class="cards">
 
-          <!-- STARTER -->
+      <!-- STARTER -->
       <div class="card">
         <h2>Starter</h2>
         <p>€49.95 one time</p>
@@ -174,9 +227,9 @@
     </div>
   </section>
 
-  <!-- COMPARISON TABLE (ONLY PLACE WITH ✅ ❌) -->
+  <!-- COMPARISON TABLE (ONLY place with green ✓ and red ✗) -->
   <section class="comparison-table container">
-    <h2 style="color:#FFD97C; text-align:center;">Compare Plans</h2>
+    <h2>Compare Plans</h2>
     <table>
       <thead>
         <tr>
@@ -187,21 +240,21 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>14 Day Launch Plan</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Prompt Outline</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Private Telegram Access</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Prompt Archive</td><td>❌</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Swipe Files & Strategy Packs</td><td>❌</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Content Stack & Updates</td><td>❌</td><td>✅</td><td>✅</td></tr>
-        <tr><td>One on One Coaching</td><td>❌</td><td>❌</td><td>✅</td></tr>
-        <tr><td>Custom Audit & Growth Plan</td><td>❌</td><td>❌</td><td>✅</td></tr>
-        <tr><td>Priority Access & Feedback</td><td>❌</td><td>❌</td><td>✅</td></tr>
+        <tr><td>14 Day Launch Plan</td><td class="green">✓</td><td class="green">✓</td><td class="green">✓</td></tr>
+        <tr><td>Prompt Outline</td><td class="green">✓</td><td class="green">✓</td><td class="green">✓</td></tr>
+        <tr><td>Private Telegram Access</td><td class="green">✓</td><td class="green">✓</td><td class="green">✓</td></tr>
+        <tr><td>Prompt Archive Unlocked</td><td class="red">✗</td><td class="green">✓</td><td class="green">✓</td></tr>
+        <tr><td>Swipe Files & Strategy Packs</td><td class="red">✗</td><td class="green">✓</td><td class="green">✓</td></tr>
+        <tr><td>Content Creation Stack & Updates</td><td class="red">✗</td><td class="green">✓</td><td class="green">✓</td></tr>
+        <tr><td>One on One Coaching</td><td class="red">✗</td><td class="red">✗</td><td class="green">✓</td></tr>
+        <tr><td>Custom Audit & Growth Plan</td><td class="red">✗</td><td class="red">✗</td><td class="green">✓</td></tr>
+        <tr><td>Priority Access & Feedback</td><td class="red">✗</td><td class="red">✗</td><td class="green">✓</td></tr>
       </tbody>
     </table>
   </section>
 
   <footer class="footer">
-    <div class="footer-links" style="margin-bottom: 1rem;">
+    <div class="footer-links" style="margin-bottom:1rem;">
       <a href="terms-and-conditions.html">Terms of Service</a> |
       <a href="privacy-policy.html">Privacy Policy</a>
     </div>
@@ -214,9 +267,9 @@
       <img src="images/googlepay-logo.png" alt="Google Pay" />
     </div>
 
-    <p style="margin-top: 1rem;">© 2025 OnlyModelAI. All rights reserved.</p>
+    <p style="margin-top:1rem;">© 2025 OnlyModelAI. All rights reserved.</p>
 
-    <div class="social-links" style="margin-top: .5rem;">
+    <div class="social-links" style="margin-top:.5rem;">
       <a href="https://instagram.com/aigirl.launch" target="_blank" rel="noopener">Instagram</a> |
       <span>Private Telegram (invite after purchase)</span> |
       <a href="https://aigirlmethod.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
