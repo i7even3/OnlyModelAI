@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <title>OnlyModelAI | Launch Your AI Girl With Confidence</title>
-  <meta name="description" content="OnlyModelAI helps you create grow and earn with your own AI girl. Clear 14 day guide posting ideas prompts setup support and message templates." />
-  <link rel="canonical" href="https://onlymodelai.com/" />
+  <title>OnlyModelAI | Launch Your AI Model with Confidence</title>
+  <meta name="description" content="OnlyModelAI helps you set up, post, and monetize an AI model page with a clear 14-day plan, prompts, message templates, and support."/>
+  <link rel="canonical" href="https://onlymodelai.com/"/>
 
-  <!-- Fonts and CSS -->
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Fonts & CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
 
-  <!-- Clarity + Referral tracking -->
+  <!-- Microsoft Clarity -->
   <script>
-  /* Microsoft Clarity */
-  (function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-  })(window, document, "clarity", "script", "su9d6i4k9o");
-
-  /* Referral tracking */
-  (function () {
-    var COOKIE_NAME = "referral_code";
-    var COOKIE_DAYS = 90;
-
-    function setCookie(name, value, days) {
-      var d = new Date();
-      d.setTime(d.getTime() + (days*24*60*60*1000));
-      document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + d.toUTCString() + "; path=/; SameSite=Lax";
-    }
-    function getCookie(name) {
-      var m = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-      return m ? decodeURIComponent(m[2]) : null;
-    }
-    function storeRef(value) {
-      if (!value) return;
-      localStorage.setItem(COOKIE_NAME, value);
-      setCookie(COOKIE_NAME, value, COOKIE_DAYS);
-      if (typeof window.clarity === "function") {
-        try { window.clarity("set", "referral_code", value); } catch(e) {}
-      }
-    }
-
-    var params = new URLSearchParams(window.location.search);
-    var ref = params.get("ref") || params.get("aff") || params.get("affiliate");
-    if (ref) storeRef(ref);
-
-    window.OMAFF = {
-      getRef: function(){ return getCookie(COOKIE_NAME) || localStorage.getItem(COOKIE_NAME) || null; },
-      setRef: storeRef,
-      appendRefToLinks: function(root){
-        var code = OMAFF.getRef();
-        if (!code) return;
-        var scope = root || document;
-        scope.querySelectorAll('a[data-append-ref]').forEach(function(a){
-          try {
-            var u = new URL(a.href, window.location.origin);
-            if (!u.searchParams.get("ref") || a.hasAttribute("data-ref-override")) {
-              u.searchParams.set("ref", code);
-            }
-            a.href = u.toString();
-          } catch(e){}
-        });
-      },
-      fillRefFields: function(root){
-        var code = OMAFF.getRef();
-        if (!code) return;
-        var scope = root || document;
-        scope.querySelectorAll('input[name="ref"], input[data-ref-field]').forEach(function(inp){
-          inp.value = code;
-        });
-      }
-    };
-
-    document.addEventListener("DOMContentLoaded", function(){
-      OMAFF.appendRefToLinks();
-      OMAFF.fillRefFields();
-    });
-  })();
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "su9d6i4k9o");
   </script>
 
-  <!-- Basic Open Graph -->
-  <meta property="og:title" content="OnlyModelAI | Launch Your AI Girl With Confidence" />
-  <meta property="og:description" content="Clear steps posting ideas prompts and support to create grow and earn." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/Homepage.png" />
+  <!-- Referral tracking (capture + append ?ref=) -->
+  <script>
+    (function () {
+      var COOKIE_NAME = "referral_code";
+      var COOKIE_DAYS = 90;
+
+      function setCookie(name, value, days) {
+        var d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + d.toUTCString() + "; path=/; SameSite=Lax";
+      }
+      function getCookie(name) {
+        var m = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+        return m ? decodeURIComponent(m[2]) : null;
+      }
+      function storeRef(value) {
+        if (!value) return;
+        localStorage.setItem(COOKIE_NAME, value);
+        setCookie(COOKIE_NAME, value, COOKIE_DAYS);
+        if (typeof window.clarity === "function") {
+          try { window.clarity("set", "referral_code", value); } catch(e) {}
+        }
+      }
+
+      var params = new URLSearchParams(window.location.search);
+      var ref = params.get("ref") || params.get("aff") || params.get("affiliate");
+      if (ref) storeRef(ref);
+
+      window.OMAFF = {
+        getRef: function(){ return getCookie(COOKIE_NAME) || localStorage.getItem(COOKIE_NAME) || null; },
+        setRef: storeRef,
+        appendRefToLinks: function(root){
+          var code = OMAFF.getRef();
+          if (!code) return;
+          var scope = root || document;
+          scope.querySelectorAll('a[data-append-ref]').forEach(function(a){
+            try {
+              var u = new URL(a.href, window.location.origin);
+              if (!u.searchParams.get("ref") || a.hasAttribute("data-ref-override")) {
+                u.searchParams.set("ref", code);
+              }
+              a.href = u.toString();
+            } catch(e){}
+          });
+        },
+        fillRefFields: function(root){
+          var code = OMAFF.getRef();
+          if (!code) return;
+          var scope = root || document;
+          scope.querySelectorAll('input[name="ref"], input[data-ref-field]').forEach(function(inp){
+            inp.value = code;
+          });
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", function(){
+        OMAFF.appendRefToLinks();
+        OMAFF.fillRefFields();
+      });
+    })();
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="OnlyModelAI | Launch Your AI Model with Confidence"/>
+  <meta property="og:description" content="Clear steps, prompts, and support to create, grow, and earn."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="images/Homepage.png"/>
 </head>
 
 <body class="index">
@@ -105,68 +106,78 @@
   </header>
 
   <main id="main">
+    <!-- Hero -->
     <section class="hero container">
-      <h1>Launch or restart your AI girl page with confidence</h1>
-      <span class="tagline">No followers no coding no design needed</span>
-      <p>OnlyModelAI is for people who are new and also for people who tried before and got stuck. You get a clear 14 day guide posting ideas prompts setup support and message templates. You can start simple and grow with a plan that works.</p>
+      <h1>Launch or restart your AI model with confidence</h1>
+      <span class="tagline">No followers. No coding. No design needed.</span>
+      <p>
+        OnlyModelAI is for beginners and for people who tried before and got stuck.
+        You get a 14-day plan, prompts, posting ideas, setup help, and message templates
+        so you can start simple and build daily.
+      </p>
       <div class="hero-cta">
         <a href="pricing.html" class="btn-main" data-append-ref>Start now</a>
         <a href="about.html" class="btn-outline" data-append-ref>Learn more</a>
       </div>
       <div class="hero-img">
-        <img src="images/Homepage.png" alt="Preview of an AI girl page made with OnlyModelAI" loading="eager" />
+        <img src="images/Homepage.png" alt="Preview of an AI model page made with OnlyModelAI" loading="eager"/>
       </div>
     </section>
 
+    <!-- Intro -->
     <section class="intro container">
-      <h2>What is OnlyModelAI</h2>
-      <p>You get step by step help. You set up fast know what to post and learn how to turn views into paying fans. You do not need fans tech skills or past success. You follow the plan and improve each day.</p>
+      <h2>What you’ll get</h2>
+      <p>
+        A clear, beginner-friendly system. You set up fast, know what to post,
+        and learn how to turn views into sales. No prior audience or tech skills required.
+      </p>
     </section>
 
+    <!-- Features -->
     <section class="features container">
       <div class="card">
         <h3>Start fast</h3>
-        <p>Use the setup tools and a clear checklist. No guesswork. You open accounts write bios and post your first content in a single session.</p>
+        <p>Follow a simple setup checklist. Open accounts, write bios, and publish your first posts in one working session.</p>
       </div>
       <div class="card">
         <h3>Know what to post</h3>
-        <p>You get post ideas scripts and messages. You will not feel stuck. You copy adjust and publish with confidence.</p>
+        <p>Use ready prompts, post ideas, and message templates. Adjust quickly and keep publishing without getting stuck.</p>
       </div>
       <div class="card">
-        <h3>Get paid smarter</h3>
-        <p>Learn prices fan growth and daily messages that convert. Use simple steps to turn clicks into money.</p>
+        <h3>Monetize with a plan</h3>
+        <p>Learn pricing, daily workflows, and conversion messages so you turn attention into revenue the right way.</p>
       </div>
     </section>
 
+    <!-- CTA band -->
     <section class="cta-band container">
-      <h2>Ready to start</h2>
-      <p>Pick a plan and unlock the full 14 day guide with ongoing tips and updates.</p>
+      <h2>Ready to start?</h2>
+      <p>Pick a plan and unlock the 14-day launch plus ongoing resources.</p>
       <a href="pricing.html" class="btn-main" data-append-ref>View pricing</a>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-links" style="margin-bottom: 1rem;">
+    <div class="footer-links" style="margin-bottom:1rem;">
       <a href="terms-and-conditions.html" data-append-ref>Terms of Service</a> |
       <a href="privacy-policy.html" data-append-ref>Privacy Policy</a>
     </div>
 
     <div class="payment-logos" aria-label="Payment methods">
-      <img src="images/paypal-logo.png" alt="PayPal" />
-      <img src="images/mastercard-logo.png" alt="MasterCard" />
-      <img src="images/amex-logo.png" alt="American Express" />
-      <img src="images/applepay-logo.png" alt="Apple Pay" />
-      <img src="images/googlepay-logo.png" alt="Google Pay" />
+      <img src="images/paypal-logo.png" alt="PayPal"/>
+      <img src="images/mastercard-logo.png" alt="Mastercard"/>
+      <img src="images/amex-logo.png" alt="American Express"/>
+      <img src="images/applepay-logo.png" alt="Apple Pay"/>
+      <img src="images/googlepay-logo.png" alt="Google Pay"/>
     </div>
 
     <p>© 2025 OnlyModelAI. All rights reserved.</p>
 
-    <div class="social-links">
+    <div class="social-links" style="margin-top:.5rem;">
       <a href="https://instagram.com/aigirl.launch" target="_blank" rel="noopener">Instagram</a> |
-      <a href="https://payhip.com/OnlyModelAI" target="_blank" rel="noopener">Payhip</a> |
-      <a href="#" aria-disabled="true">Discord</a>
+      <span>Private Telegram (invite after purchase)</span> |
+      <a href="https://aigirlmethod.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
     </div>
   </footer>
 </body>
 </html>
-
