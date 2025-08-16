@@ -3,52 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="OnlyModelAI pricing — Starter, Deluxe, Mentorship"/>
+  <meta name="description" content="OnlyModelAI pricing plans — Starter, Deluxe, and Mentorship."/>
   <title>Pricing | OnlyModelAI</title>
   <link rel="stylesheet" href="styles.css"/>
-
-  <!-- small page-local styles for alt-pay + layout hooks -->
-  <style>
-    .pricing .cards { margin-top: 2rem; }
-    /* alt payment dropdown */
-    details.alt-pay{ margin-top:.75rem; border:1px solid rgba(255,255,255,.12); border-radius:12px; background:rgba(255,255,255,.04); overflow:hidden; width:90%; margin-left:auto; margin-right:auto; }
-    details.alt-pay > summary{ cursor:pointer; padding:10px 12px; font-weight:800; list-style:none; }
-    details.alt-pay > summary::-webkit-details-marker{ display:none; }
-    details.alt-pay > summary::after{ content:"▾"; float:right; font-size:12px; opacity:.75; transition:transform .15s ease; }
-    details.alt-pay[open] > summary::after{ transform:rotate(-180deg); }
-    .alt-pay-content{ padding:12px; border-top:1px solid rgba(255,255,255,.08); display:grid; gap:8px; }
-    .btn-alt{ display:inline-block; text-align:center; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.06); color:inherit; text-decoration:none; }
-    /* small note under CTAs */
-    .cta-note{ margin-top:.5rem; font-size:.9rem; opacity:.8; }
-  </style>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "su9d6i4k9o");
-  </script>
-
-  <!-- Referral capture + append to outbound links -->
-  <script>
-    (function () {
-      const params = new URLSearchParams(window.location.search);
-      const ref = params.get('ref');
-      if (ref) localStorage.setItem('referral', ref);
-      window.addEventListener('DOMContentLoaded', function () {
-        const referral = localStorage.getItem('referral');
-        if (!referral) return;
-        document.querySelectorAll('a[data-append-ref="true"]').forEach(a=>{
-          try{ const u=new URL(a.href); if(!u.searchParams.get('ref')){ u.searchParams.set('ref', referral); a.href=u.toString(); } }catch(e){}
-        });
-      });
-    })();
-  </script>
 </head>
-
-<body>
+<body class="pricing">
   <header class="nav">
     <div class="logo"><a href="index.html">OnlyModelAI</a></div>
     <nav>
@@ -56,134 +15,68 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="roadmap.html">Roadmap</a></li>
-        <li><a class="active" href="pricing.html">Pricing</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="container pricing">
-    <h1>Choose Your Plan</h1>
+  <section class="container">
+    <h1 style="color:#FFD97C; margin-bottom:1rem;">Choose Your Plan</h1>
+    <p style="max-width:720px; margin:0 auto 3rem;">
+      Whether you are starting out or ready to scale, we have a package built to fit you.  
+      Every plan is a one time payment — no subscriptions, no hidden fees.
+    </p>
 
     <div class="cards">
-
-      <!-- STARTER -->
+      <!-- Starter Plan -->
       <div class="card">
         <h2>Starter</h2>
-        <p class="price">€49.95 one time</p>
+        <p class="price">€49.99 one time</p>
         <ul>
-          <li>14 Day Launch Plan</li>
-          <li>Prompt Outline</li>
-          <li>Free Tools</li>
-          <li>Posting Templates</li>
-          <li>Private Telegram access (invite after purchase)</li>
+          <li>Step by step launch guide</li>
+          <li>Prompt vault</li>
+          <li>Content starter stack</li>
+          <li>Private Telegram access</li>
         </ul>
-
         <div class="card-footer">
-          <a
-            href="https://aigirlmethod.gumroad.com/l/zlyiw?_gl=1*rw9xdv*_ga*MTEyMjkzMTM4Ny4xNzUwMTg1NjEx*_ga_6LJN6D94N6*czE3NTUyMDg2NTkkbzY3JGcxJHQxNzU1MjA4Njc5JGo0MCRsMCRoMA.."
-            class="btn-main" target="_blank" rel="noopener" data-append-ref="true"
-            aria-label="Buy Starter on Gumroad"
-          >Join Starter</a>
-
-          <details class="alt-pay">
-            <summary>Alternative payment methods</summary>
-            <div class="alt-pay-content">
-              <a class="btn-alt" href="https://paypal.me/your-starter-link" target="_blank" rel="noopener">Pay with PayPal</a>
-              <a class="btn-alt" href="#" aria-disabled="true">Crypto (on request)</a>
-            </div>
-          </details>
-          <div class="cta-note">Secure checkout via Gumroad. One time access.</div>
+          <a href="https://gumroad.com/l/starter" class="btn-main">Get Starter</a>
         </div>
       </div>
 
-      <!-- DELUXE (BEST SELLER) -->
+      <!-- Deluxe Plan -->
       <div class="card deluxe">
-        <span class="badge">best seller</span>
+        <span class="badge">Best Seller</span>
         <h2>Deluxe</h2>
         <p class="price">€149.99 one time</p>
         <ul>
           <li>Everything in Starter</li>
-          <li>Access key to private Telegram</li>
-          <li>Prompt Archive unlocked</li>
-          <li>Swipe files and strategy packs</li>
-          <li>Content creation stack + free updates</li>
+          <li>Advanced content stacks</li>
+          <li>Exclusive swipe files</li>
+          <li>Direct Q&A support</li>
+          <li>Extra monetization methods</li>
         </ul>
-
         <div class="card-footer">
-          <a
-            href="https://aigirlmethod.gumroad.com/l/ckzui"
-            class="btn-main" target="_blank" rel="noopener" data-append-ref="true"
-            aria-label="Buy Deluxe on Gumroad"
-          >Get Deluxe</a>
-
-          <details class="alt-pay">
-            <summary>Alternative payment methods</summary>
-            <div class="alt-pay-content">
-              <a class="btn-alt" href="https://paypal.me/your-deluxe-link" target="_blank" rel="noopener">Pay with PayPal</a>
-              <a class="btn-alt" href="#" aria-disabled="true">Crypto (on request)</a>
-            </div>
-          </details>
-          <div class="cta-note">Most buyers choose Deluxe for the updates and extra resources.</div>
+          <a href="https://gumroad.com/l/deluxe" class="btn-main">Get Deluxe</a>
         </div>
       </div>
 
-      <!-- MENTORSHIP -->
+      <!-- Mentorship Plan -->
       <div class="card">
         <h2>Mentorship</h2>
         <p class="price">€499.99 one time</p>
         <ul>
-          <li>All Deluxe features</li>
-          <li>One on one coaching</li>
-          <li>Custom audit and growth plan</li>
-          <li>Priority access and feedback</li>
+          <li>Everything in Deluxe</li>
+          <li>1-on-1 private coaching</li>
+          <li>Custom content system setup</li>
+          <li>Ongoing strategy calls</li>
         </ul>
-
         <div class="card-footer">
-          <a
-            href="https://aigirlmethod.gumroad.com/l/Mentor"
-            class="btn-main" target="_blank" rel="noopener" data-append-ref="true"
-            aria-label="Apply for Mentorship on Gumroad"
-          >Apply for Mentorship</a>
-
-          <details class="alt-pay">
-            <summary>Alternative payment methods</summary>
-            <div class="alt-pay-content">
-              <a class="btn-alt" href="https://paypal.me/your-mentorship-link" target="_blank" rel="noopener">Pay with PayPal</a>
-              <a class="btn-alt" href="#" aria-disabled="true">Crypto (on request)</a>
-            </div>
-          </details>
-          <div class="cta-note">Includes direct support and personal guidance.</div>
+          <a href="https://gumroad.com/l/mentorship" class="btn-main">Apply for Mentorship</a>
         </div>
       </div>
-
     </div>
-  </section>
-
-  <!-- Compare table (uses “one time access” language) -->
-  <section class="comparison-table container">
-    <h2 style="color:#FFD97C; text-align:center;">Compare Plans</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Starter</th>
-          <th>Deluxe</th>
-          <th>Mentorship</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>One time access</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>14 Day Launch Plan</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Prompt Outline & Templates</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Free Tools</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Free updates</td><td>❌</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Prompt Archive</td><td>❌</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Swipe files & Strategy packs</td><td>❌</td><td>✅</td><td>✅</td></tr>
-        <tr><td>One on one coaching</td><td>❌</td><td>❌</td><td>✅</td></tr>
-      </tbody>
-    </table>
   </section>
 
   <footer class="footer">
@@ -191,7 +84,6 @@
       <a href="terms-and-conditions.html">Terms of Service</a> |
       <a href="privacy-policy.html">Privacy Policy</a>
     </div>
-
     <div class="payment-logos">
       <img src="images/paypal-logo.png" alt="PayPal" />
       <img src="images/mastercard-logo.png" alt="Mastercard" />
@@ -199,14 +91,7 @@
       <img src="images/applepay-logo.png" alt="Apple Pay" />
       <img src="images/googlepay-logo.png" alt="Google Pay" />
     </div>
-
-    <p style="margin-top: 1rem;">© 2025 OnlyModelAI. All rights reserved.</p>
-
-    <div class="social-links" style="margin-top: .5rem;">
-      <a href="https://instagram.com/aigirl.launch" target="_blank" rel="noopener">Instagram</a> |
-      <span>Private Telegram (invite after purchase)</span> |
-      <a href="https://aigirlmethod.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
-    </div>
+    <p>© 2025 OnlyModelAI. All rights reserved.</p>
   </footer>
 </body>
 </html>
