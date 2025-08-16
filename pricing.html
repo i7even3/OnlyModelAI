@@ -3,114 +3,26 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="OnlyModelAI pricing — Starter, Deluxe, Mentorship plans"/>
+  <meta name="description" content="OnlyModelAI pricing — Starter, Deluxe, Mentorship"/>
   <title>Pricing | OnlyModelAI</title>
   <link rel="stylesheet" href="styles.css"/>
 
+  <!-- small page-local styles for alt-pay + layout hooks -->
   <style>
-    /* Base */
-    body { background:#0f1115; color:#e7e7ea; }
-    .container { max-width:1100px; margin:0 auto; padding:32px 16px; }
-    h1, h2 { margin:0 0 12px 0; }
-    h1 { text-align:center; font-size:2rem; }
-
-    /* Grid */
-    .cards {
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:28px;
-      margin-top:28px;
-    }
-
-    /* Card */
-    .card {
-      background:linear-gradient(180deg,#1a1d25 0%, #171a21 100%);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:18px;
-      padding:24px;
-      display:flex;
-      flex-direction:column;
-      min-height:540px;
-      position:relative;
-      transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease;
-    }
-    .card:hover { transform:translateY(-2px); box-shadow:0 18px 36px rgba(0,0,0,.35); }
-    .card h2 { font-size:1.35rem; text-align:center; }
-    .price { text-align:center; font-weight:800; font-size:1rem; opacity:.95; margin:2px 0 14px; }
-    .divider { height:1px; background:linear-gradient(90deg,transparent, rgba(255,255,255,.08), transparent); margin:10px 0 14px; }
-    .card ul { list-style:none; padding:0; margin:0 0 16px 0; }
-    .card ul li { padding:8px 0; border-bottom:1px dashed rgba(255,255,255,.06); text-align:center; }
-    .card ul li:last-child { border-bottom:0; }
-    .card-footer { margin-top:auto; }
-
-    /* Featured / Best Seller */
-    .card--featured {
-      border-color:rgba(255,217,124,.45);
-      box-shadow:0 0 0 2px rgba(255,217,124,.28), 0 28px 48px rgba(255,217,124,.08);
-      transform:translateY(-2px);
-    }
-    .badge {
-      position:absolute;
-      top:14px;
-      left:50%;
-      transform:translateX(-50%);
-      background:#ffd97c;
-      color:#111;
-      font-weight:900;
-      font-size:.78rem;
-      padding:6px 12px;
-      border-radius:999px;
-      box-shadow:0 6px 14px rgba(255,217,124,.25);
-      text-transform:lowercase;
-      letter-spacing:.2px;
-    }
-
-    /* Buttons (90% width centered) */
-    .btn-main {
-      display:block;
-      width:90%;
-      margin:0 auto;
-      text-align:center;
-      padding:14px 16px;
-      border-radius:12px;
-      background:#FFD97C;
-      color:#111;
-      font-weight:900;
-      text-decoration:none;
-      letter-spacing:.2px;
-      transition:transform .06s ease, box-shadow .2s ease, filter .15s ease;
-    }
-    .btn-main:hover { transform:translateY(-1px); box-shadow:0 12px 22px rgba(255,217,124,.22); filter:saturate(1.05); }
-
-    /* Alternative payments dropdown matches button width */
-    .alt-wrap { width:90%; margin:10px auto 0; }
-    .alt-pay { 
-      border:1px solid rgba(255,255,255,.12); 
-      border-radius:12px; 
-      background:rgba(255,255,255,.04); 
-      overflow:hidden;
-    }
-    .alt-pay > summary { cursor:pointer; padding:10px 12px; font-weight:800; list-style:none; }
-    .alt-pay > summary::-webkit-details-marker { display:none; }
-    .alt-pay > summary::after { content:"▾"; float:right; font-size:12px; opacity:.75; transition:transform .15s ease; }
-    .alt-pay[open] > summary::after { transform:rotate(-180deg); }
-    .alt-pay-content { padding:12px; border-top:1px solid rgba(255,255,255,.08); display:grid; gap:8px; }
-    .btn-alt { display:inline-block; text-align:center; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.06); color:inherit; text-decoration:none; }
-
-    /* Compare table */
-    .comparison-table h2 { color:#FFD97C; text-align:center; }
-    .comparison-table table { width:100%; border-collapse:collapse; margin-top:18px; }
-    .comparison-table th, .comparison-table td { padding:10px 12px; border-bottom:1px solid rgba(255,255,255,.08); text-align:center; }
-    .comparison-table th:first-child, .comparison-table td:first-child { text-align:left; }
-
-    /* Responsive */
-    @media (max-width: 980px) {
-      .cards { grid-template-columns:1fr; }
-      .card { min-height:auto; }
-    }
+    .pricing .cards { margin-top: 2rem; }
+    /* alt payment dropdown */
+    details.alt-pay{ margin-top:.75rem; border:1px solid rgba(255,255,255,.12); border-radius:12px; background:rgba(255,255,255,.04); overflow:hidden; width:90%; margin-left:auto; margin-right:auto; }
+    details.alt-pay > summary{ cursor:pointer; padding:10px 12px; font-weight:800; list-style:none; }
+    details.alt-pay > summary::-webkit-details-marker{ display:none; }
+    details.alt-pay > summary::after{ content:"▾"; float:right; font-size:12px; opacity:.75; transition:transform .15s ease; }
+    details.alt-pay[open] > summary::after{ transform:rotate(-180deg); }
+    .alt-pay-content{ padding:12px; border-top:1px solid rgba(255,255,255,.08); display:grid; gap:8px; }
+    .btn-alt{ display:inline-block; text-align:center; padding:10px 12px; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.06); color:inherit; text-decoration:none; }
+    /* small note under CTAs */
+    .cta-note{ margin-top:.5rem; font-size:.9rem; opacity:.8; }
   </style>
 
-  <!-- Microsoft Clarity Heatmap Tracking -->
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -119,7 +31,7 @@
     })(window, document, "clarity", "script", "su9d6i4k9o");
   </script>
 
-  <!-- Referral capture and append to outbound checkouts -->
+  <!-- Referral capture + append to outbound links -->
   <script>
     (function () {
       const params = new URLSearchParams(window.location.search);
@@ -128,11 +40,8 @@
       window.addEventListener('DOMContentLoaded', function () {
         const referral = localStorage.getItem('referral');
         if (!referral) return;
-        document.querySelectorAll('a[data-append-ref="true"]').forEach(a => {
-          try {
-            const u = new URL(a.href);
-            if (!u.searchParams.get('ref')) { u.searchParams.set('ref', referral); a.href = u.toString(); }
-          } catch(e){}
+        document.querySelectorAll('a[data-append-ref="true"]').forEach(a=>{
+          try{ const u=new URL(a.href); if(!u.searchParams.get('ref')){ u.searchParams.set('ref', referral); a.href=u.toString(); } }catch(e){}
         });
       });
     })();
@@ -154,15 +63,15 @@
     </nav>
   </header>
 
-  <section class="container">
+  <section class="container pricing">
     <h1>Choose Your Plan</h1>
+
     <div class="cards">
 
-      <!-- Starter -->
+      <!-- STARTER -->
       <div class="card">
         <h2>Starter</h2>
-        <div class="price">€49.95 one time</div>
-        <div class="divider"></div>
+        <p class="price">€49.95 one time</p>
         <ul>
           <li>14 Day Launch Plan</li>
           <li>Prompt Outline</li>
@@ -174,32 +83,26 @@
         <div class="card-footer">
           <a
             href="https://aigirlmethod.gumroad.com/l/zlyiw?_gl=1*rw9xdv*_ga*MTEyMjkzMTM4Ny4xNzUwMTg1NjEx*_ga_6LJN6D94N6*czE3NTUyMDg2NTkkbzY3JGcxJHQxNzU1MjA4Njc5JGo0MCRsMCRoMA.."
-            class="btn-main" target="_blank" rel="noopener"
-            aria-label="Buy Starter on Gumroad" data-append-ref="true"
+            class="btn-main" target="_blank" rel="noopener" data-append-ref="true"
+            aria-label="Buy Starter on Gumroad"
           >Join Starter</a>
 
-          <div class="alt-wrap">
-            <details class="alt-pay">
-              <summary>Alternative payment methods</summary>
-              <div class="alt-pay-content">
-                <a class="btn-alt" href="https://paypal.me/your-starter-link" target="_blank" rel="noopener">Pay with PayPal</a>
-                <a class="btn-alt" href="https://your-crypto-checkout.example/starter" target="_blank" rel="noopener">Pay with Crypto</a>
-              </div>
-            </details>
-          </div>
-
-          <p style="text-align:center; opacity:.8; font-size:.9rem; margin-top:10px;">
-            Secure checkout via Gumroad. One time access.
-          </p>
+          <details class="alt-pay">
+            <summary>Alternative payment methods</summary>
+            <div class="alt-pay-content">
+              <a class="btn-alt" href="https://paypal.me/your-starter-link" target="_blank" rel="noopener">Pay with PayPal</a>
+              <a class="btn-alt" href="#" aria-disabled="true">Crypto (on request)</a>
+            </div>
+          </details>
+          <div class="cta-note">Secure checkout via Gumroad. One time access.</div>
         </div>
       </div>
 
-      <!-- Deluxe (Best Seller) -->
-      <div class="card card--featured">
-        <div class="badge">best seller</div>
+      <!-- DELUXE (BEST SELLER) -->
+      <div class="card deluxe">
+        <span class="badge">best seller</span>
         <h2>Deluxe</h2>
-        <div class="price">€149.99 one time</div>
-        <div class="divider"></div>
+        <p class="price">€149.99 one time</p>
         <ul>
           <li>Everything in Starter</li>
           <li>Access key to private Telegram</li>
@@ -211,31 +114,25 @@
         <div class="card-footer">
           <a
             href="https://aigirlmethod.gumroad.com/l/ckzui"
-            class="btn-main" target="_blank" rel="noopener"
-            aria-label="Buy Deluxe on Gumroad" data-append-ref="true"
+            class="btn-main" target="_blank" rel="noopener" data-append-ref="true"
+            aria-label="Buy Deluxe on Gumroad"
           >Get Deluxe</a>
 
-          <div class="alt-wrap">
-            <details class="alt-pay">
-              <summary>Alternative payment methods</summary>
-              <div class="alt-pay-content">
-                <a class="btn-alt" href="https://paypal.me/your-deluxe-link" target="_blank" rel="noopener">Pay with PayPal</a>
-                <a class="btn-alt" href="https://your-crypto-checkout.example/deluxe" target="_blank" rel="noopener">Pay with Crypto</a>
-              </div>
-            </details>
-          </div>
-
-          <p style="text-align:center; opacity:.8; font-size:.9rem; margin-top:10px;">
-            Most buyers choose Deluxe for the updates and extra resources.
-          </p>
+          <details class="alt-pay">
+            <summary>Alternative payment methods</summary>
+            <div class="alt-pay-content">
+              <a class="btn-alt" href="https://paypal.me/your-deluxe-link" target="_blank" rel="noopener">Pay with PayPal</a>
+              <a class="btn-alt" href="#" aria-disabled="true">Crypto (on request)</a>
+            </div>
+          </details>
+          <div class="cta-note">Most buyers choose Deluxe for the updates and extra resources.</div>
         </div>
       </div>
 
-      <!-- Mentorship -->
+      <!-- MENTORSHIP -->
       <div class="card">
         <h2>Mentorship</h2>
-        <div class="price">€499.99 one time</div>
-        <div class="divider"></div>
+        <p class="price">€499.99 one time</p>
         <ul>
           <li>All Deluxe features</li>
           <li>One on one coaching</li>
@@ -246,31 +143,27 @@
         <div class="card-footer">
           <a
             href="https://aigirlmethod.gumroad.com/l/Mentor"
-            class="btn-main" target="_blank" rel="noopener"
-            aria-label="Apply for Mentorship on Gumroad" data-append-ref="true"
+            class="btn-main" target="_blank" rel="noopener" data-append-ref="true"
+            aria-label="Apply for Mentorship on Gumroad"
           >Apply for Mentorship</a>
 
-          <div class="alt-wrap">
-            <details class="alt-pay">
-              <summary>Alternative payment methods</summary>
-              <div class="alt-pay-content">
-                <a class="btn-alt" href="https://paypal.me/your-mentorship-link" target="_blank" rel="noopener">Pay with PayPal</a>
-                <a class="btn-alt" href="https://your-crypto-checkout.example/mentorship" target="_blank" rel="noopener">Pay with Crypto</a>
-              </div>
-            </details>
-          </div>
-
-          <p style="text-align:center; opacity:.8; font-size:.9rem; margin-top:10px;">
-            Includes direct support and personal guidance.
-          </p>
+          <details class="alt-pay">
+            <summary>Alternative payment methods</summary>
+            <div class="alt-pay-content">
+              <a class="btn-alt" href="https://paypal.me/your-mentorship-link" target="_blank" rel="noopener">Pay with PayPal</a>
+              <a class="btn-alt" href="#" aria-disabled="true">Crypto (on request)</a>
+            </div>
+          </details>
+          <div class="cta-note">Includes direct support and personal guidance.</div>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- Compare table (uses “one time access” language) -->
   <section class="comparison-table container">
-    <h2>Compare Plans</h2>
+    <h2 style="color:#FFD97C; text-align:center;">Compare Plans</h2>
     <table>
       <thead>
         <tr>
@@ -283,13 +176,12 @@
       <tbody>
         <tr><td>One time access</td><td>✅</td><td>✅</td><td>✅</td></tr>
         <tr><td>14 Day Launch Plan</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Prompt Outline</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Posting Templates</td><td>✅</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Prompt Outline & Templates</td><td>✅</td><td>✅</td><td>✅</td></tr>
         <tr><td>Free Tools</td><td>✅</td><td>✅</td><td>✅</td></tr>
-        <tr><td>Prompt Archive</td><td>❌</td><td>✅</td><td>✅</td></tr>
         <tr><td>Free updates</td><td>❌</td><td>✅</td><td>✅</td></tr>
-        <tr><td>One on one mentorship</td><td>❌</td><td>❌</td><td>✅</td></tr>
-        <tr><td>Private support</td><td>❌</td><td>❌</td><td>✅</td></tr>
+        <tr><td>Prompt Archive</td><td>❌</td><td>✅</td><td>✅</td></tr>
+        <tr><td>Swipe files & Strategy packs</td><td>❌</td><td>✅</td><td>✅</td></tr>
+        <tr><td>One on one coaching</td><td>❌</td><td>❌</td><td>✅</td></tr>
       </tbody>
     </table>
   </section>
@@ -312,8 +204,8 @@
 
     <div class="social-links" style="margin-top: .5rem;">
       <a href="https://instagram.com/aigirl.launch" target="_blank" rel="noopener">Instagram</a> |
-      <a href="https://aigirlmethod.gumroad.com" target="_blank" rel="noopener">Gumroad</a> |
-      <span>Private Telegram (invite after purchase)</span>
+      <span>Private Telegram (invite after purchase)</span> |
+      <a href="https://aigirlmethod.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
     </div>
   </footer>
 </body>
