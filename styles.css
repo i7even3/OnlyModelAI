@@ -451,3 +451,138 @@ code {
     width: 100%;
   }
 }
+/* ================================
+   PRICING + CARD LAYOUT FIXES
+   ================================ */
+
+/* 1) Use a responsive grid for cards so columns are even and compact */
+.cards,
+.features {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+/* 2) Compact, equal-height cards with sane padding and tighter text rhythm */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #2A2F35;
+  padding: 1.25rem;                 /* was 1.5rem */
+  border-radius: 6px;
+  /* Remove artificial height; let content + footer define it */
+  min-height: auto;
+  max-width: none;
+  overflow: hidden;                 /* prevents button glow bleeding out */
+}
+
+.card h2,
+.card h3 {
+  margin: 0 0 .45rem 0;             /* tighter headings */
+  line-height: 1.25;
+}
+
+.card p {
+  margin: 0 0 .75rem 0;             /* reduce long paragraphs */
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: .6rem 0 0 0;              /* tighter spacing above lists */
+}
+
+.card ul li {
+  margin: .35rem 0;                 /* tighter bullet spacing */
+  line-height: 1.35;
+}
+
+/* 3) Footer sticks to bottom so CTAs align across all cards */
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;                        /* slightly tighter than before */
+}
+
+/* 4) Buttons never overflow the card on any width */
+.btn-main,
+.alt-pay .btn-alt,
+.btn-outline {
+  display: block;
+  width: 100%;
+  max-width: 100%;                  /* prevents overflow on narrow cards */
+  box-sizing: border-box;           /* padding is included in width */
+}
+
+/* Tweak main CTA padding a touch so it feels snug on mobile */
+.btn-main {
+  padding: 12px 16px;               /* was 14px 18px */
+  border-radius: 10px;
+}
+
+/* 5) Alt-pay buttons look like buttons (not links) and stay inside */
+.alt-pay summary { cursor: pointer; }
+.alt-pay-content .btn-alt {
+  text-align: center;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  text-decoration: none;
+}
+.alt-pay-content .btn-alt:hover { background: rgba(255,255,255,.10); }
+
+/* 6) Deluxe “best seller” badge + glow without affecting layout */
+.card--featured,
+.card.deluxe {
+  border: 1px solid rgba(255,217,124,.60);
+  box-shadow:
+    0 0 16px rgba(255,217,124,.40),
+    0 0 36px rgba(255,217,124,.28),
+    0 16px 44px rgba(0,0,0,.50);
+  z-index: 1;
+}
+
+/* Support both class patterns: .card--featured .badge and .card.deluxe .badge */
+.card--featured .badge,
+.card.deluxe .badge {
+  position: absolute;
+  top: 12px;
+  left: 14px;                       /* top-left per your request */
+  right: auto;
+  background: #FFD97C;
+  color: #111;
+  font-weight: 800;
+  font-size: .78rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-transform: lowercase;
+  box-shadow:
+    0 0 10px rgba(255,217,124,.85),
+    0 0 22px rgba(255,217,124,.55);
+  z-index: 3;
+}
+
+/* 7) Comparison table: keep as-is, but ensure it never stretches page width */
+.comparison-table table {
+  table-layout: fixed;              /* consistent cell widths */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 8) Mobile tightening */
+@media (max-width: 768px) {
+  .container { padding: 1.5rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .btn-main, .btn-outline { font-size: .95rem; }
+
+  /* Prevent extra vertical bloat on mobile cards */
+  .card { padding: 1rem; }
+  .card ul li { margin: .3rem 0; }
+}
