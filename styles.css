@@ -59,7 +59,39 @@ a:hover {
 .menu li a:hover {
   color: #FFD97C;
 }
+/* === Pricing Badge Fix === */
+.card.deluxe {
+  position: relative;
+}
 
+.card.deluxe .badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;   /* moves it to top right */
+  background: #FFD97C;
+  color: #000;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+/* === Make all pricing cards same height === */
+.cards {
+  align-items: stretch; /* stretch all cards equally */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-footer {
+  margin-top: auto; /* push footer to bottom so buttons align */
+}
 /* === Hero Section === */
 .hero {
   text-align: center;
