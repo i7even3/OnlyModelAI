@@ -1,183 +1,1145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  <title>OnlyModelAI | Launch Your AI Model with Confidence</title>
-  <meta name="description" content="OnlyModelAI helps you set up, post, and monetize an AI model page with a clear 14-day plan, prompts, message templates, and support."/>
-  <link rel="canonical" href="https://onlymodelai.com/"/>
-
-  <!-- Fonts & CSS -->
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-
-  <!-- Microsoft Clarity -->
-  <script>
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "su9d6i4k9o");
-  </script>
-
-  <!-- Referral tracking (capture + append ?ref=) -->
-  <script>
-    (function () {
-      var COOKIE_NAME = "referral_code";
-      var COOKIE_DAYS = 90;
-
-      function setCookie(name, value, days) {
-        var d = new Date();
-        d.setTime(d.getTime() + (days*24*60*60*1000));
-        document.cookie = name + "=" + encodeURIComponent(value) + "; expires=" + d.toUTCString() + "; path=/; SameSite=Lax";
-      }
-      function getCookie(name) {
-        var m = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-        return m ? decodeURIComponent(m[2]) : null;
-      }
-      function storeRef(value) {
-        if (!value) return;
-        localStorage.setItem(COOKIE_NAME, value);
-        setCookie(COOKIE_NAME, value, COOKIE_DAYS);
-        if (typeof window.clarity === "function") {
-          try { window.clarity("set", "referral_code", value); } catch(e) {}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyModelAI - Launch your AI model girl and start earning</title>
+    <meta name="description" content="A proven step by step system that shows what to post and how to scale even if you tried before and did not get results">
+    <meta name="author" content="OnlyModelAI">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://onlymodelai.com">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="OnlyModelAI - Launch your AI model girl and start earning">
+    <meta property="og:description" content="A proven step by step system that shows what to post and how to scale even if you tried before and did not get results">
+    <meta property="og:image" content="https://onlymodelai.com/og-default.jpg">
+    <meta property="og:url" content="https://onlymodelai.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OnlyModelAI">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OnlyModelAI - Launch your AI model girl and start earning">
+    <meta name="twitter:description" content="A proven step by step system that shows what to post and how to scale even if you tried before and did not get results">
+    <meta name="twitter:image" content="https://onlymodelai.com/og-default.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "OnlyModelAI",
+        "url": "https://onlymodelai.com",
+        "logo": "https://onlymodelai.com/og-default.jpg",
+        "description": "Launch your AI model girl and start earning with a clear method",
+        "email": "aigirl.launch@gmail.com",
+        "sameAs": [
+            "https://instagram.com/onlymodelai.offcial/"
+        ]
+    }
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="#" as="image">
+    
+    <style>
+        /* OnlyModelAI Brand CSS - Embedded for Performance */
+        :root {
+            --bg: #0b1220;
+            --surface: #111a2b;
+            --primary: #6EE7F9;
+            --accent: #A78BFA;
+            --text: #F6F7F9;
+            --muted: #9AA4B2;
+            --ok: #34D399;
+            --border: #1e2a3a;
         }
-      }
 
-      var params = new URLSearchParams(window.location.search);
-      var ref = params.get("ref") || params.get("aff") || params.get("affiliate");
-      if (ref) storeRef(ref);
-
-      window.OMAFF = {
-        getRef: function(){ return getCookie(COOKIE_NAME) || localStorage.getItem(COOKIE_NAME) || null; },
-        setRef: storeRef,
-        appendRefToLinks: function(root){
-          var code = OMAFF.getRef();
-          if (!code) return;
-          var scope = root || document;
-          scope.querySelectorAll('a[data-append-ref]').forEach(function(a){
-            try {
-              var u = new URL(a.href, window.location.origin);
-              if (!u.searchParams.get("ref") || a.hasAttribute("data-ref-override")) {
-                u.searchParams.set("ref", code);
-              }
-              a.href = u.toString();
-            } catch(e){}
-          });
-        },
-        fillRefFields: function(root){
-          var code = OMAFF.getRef();
-          if (!code) return;
-          var scope = root || document;
-          scope.querySelectorAll('input[name="ref"], input[data-ref-field]').forEach(function(inp){
-            inp.value = code;
-          });
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      };
 
-      document.addEventListener("DOMContentLoaded", function(){
-        OMAFF.appendRefToLinks();
-        OMAFF.fillRefFields();
-      });
-    })();
-  </script>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="OnlyModelAI | Launch Your AI Model with Confidence"/>
-  <meta property="og:description" content="Clear steps, prompts, and support to create, grow, and earn."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="images/Homepage.png"/>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header Styles */
+        .header {
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav {
+            display: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                display: flex;
+            }
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--bg);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--surface);
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-surface {
+            background: var(--surface);
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .text-muted {
+            color: var(--muted);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-4 {
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid-4 {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Specific Styles */
+        .hero {
+            display: grid;
+            gap: 3rem;
+            align-items: center;
+            min-height: 80vh;
+        }
+
+        @media (min-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-image {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, rgba(110, 231, 249, 0.1), rgba(167, 139, 250, 0.1));
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        /* Trust Strip */
+        .trust-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
+        .trust-icon {
+            width: 1rem;
+            height: 1rem;
+            color: var(--ok);
+        }
+
+        /* Feature Icons */
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: rgba(110, 231, 249, 0.1);
+            border: 1px solid rgba(110, 231, 249, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .feature-icon svg {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary);
+        }
+
+        /* Step Numbers */
+        .step-number {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: rgba(110, 231, 249, 0.1);
+            border: 1px solid rgba(110, 231, 249, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin: 0 auto 1rem;
+        }
+
+        /* CTA Band */
+        .cta-band {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-band h2 {
+            color: var(--bg);
+            margin-bottom: 1rem;
+        }
+
+        .cta-band .btn {
+            background: var(--bg);
+            color: var(--accent);
+        }
+
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 1rem;
+            z-index: 1000;
+            display: none;
+        }
+
+        .cookie-banner.show {
+            display: block;
+        }
+
+        .cookie-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cookie-content p {
+            flex: 1;
+            min-width: 300px;
+            margin: 0;
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        /* Testimonial Images */
+        .testimonial-img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            color: var(--text);
+            padding: 1.5rem 0;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 0 1.5rem 0;
+            color: var(--muted);
+            display: none;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* Responsive Typography */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 4rem;
+            }
+            h2 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 5rem;
+            }
+        }
+
+        /* Image placeholders */
+        .img-placeholder {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
+        /* Loading and performance optimizations */
+        img[loading="lazy"] {
+            transition: opacity 0.3s;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link hidden">Skip to main content</a>
 
-<body class="index">
-  <header class="nav">
-    <div class="logo"><a href="index.html" aria-label="OnlyModelAI Home">OnlyModelAI</a></div>
-    <nav aria-label="Primary">
-      <ul class="menu">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about.html" data-append-ref>About</a></li>
-        <li><a href="roadmap.html" data-append-ref>Roadmap</a></li>
-        <li><a href="pricing.html" data-append-ref>Pricing</a></li>
-        <li><a href="faq.html" data-append-ref>FAQ</a></li>
-        <li><a href="contact.html" data-append-ref>Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">OnlyModelAI</a>
+                <nav class="nav">
+                    <a href="#home">Home</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#how-it-works">How it works</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#affiliate">Affiliate</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <a href="https://aigirlmethod.gumroad.com/l/ckzui" class="btn btn-primary" data-gumroad="deluxe">
+                    Get Deluxe now
+                </a>
+            </div>
+        </div>
+    </header>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero container">
-      <h1>Launch or restart your AI model with confidence</h1>
-      <span class="tagline">No followers. No coding. No design needed.</span>
-      <p>
-        OnlyModelAI is for beginners and for people who tried before and got stuck.
-        You get a 14 day plan, prompts, posting ideas, setup help, and message templates
-        so you can start simple and build daily.
-      </p>
-      <div class="hero-cta">
-        <a href="pricing.html" class="btn-main" data-append-ref>Start now</a>
-        <a href="about.html" class="btn-outline" data-append-ref>Learn more</a>
-      </div>
-      <div class="hero-img">
-        <img src="images/Homepage.png" alt="Preview of an AI model page made with OnlyModelAI" loading="eager"/>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Launch your AI model with confidence and start earning</h1>
+                        <p class="text-muted" style="font-size: 1.25rem; margin-bottom: 2rem;">
+                            Complete 14-day launch system with prompts, posting strategies, and monetization templates. Perfect for beginners or those who tried before without success.
+                        </p>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <a href="#pricing" class="btn btn-primary btn-lg">Start now</a>
+                        </div>
 
-    <!-- Intro -->
-    <section class="intro container">
-      <h2>What you’ll get</h2>
-      <p>
-        A clear, beginner friendly system. You set up fast, know what to post,
-        and learn how to turn views into sales. No prior audience or tech skills required.
-      </p>
-    </section>
+                        <!-- Trust Strip -->
+                        <div class="trust-strip">
+                            <div class="trust-item">
+                                <svg class="trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                                <span>Secure checkout</span>
+                            </div>
+                            <div class="trust-item">
+                                <svg class="trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                                <span>Instant access</span>
+                            </div>
+                            <div class="trust-item">
+                                <svg class="trust-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                                </svg>
+                                <span>Updates included</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Features -->
-    <section class="features container">
-      <div class="card">
-        <h3>Start fast</h3>
-        <p>Follow a simple setup checklist. Open accounts, write bios, and publish your first posts in one working session.</p>
-      </div>
-      <div class="card">
-        <h3>Know what to post</h3>
-        <p>Use ready prompts, post ideas, and message templates. Adjust quickly and keep publishing without getting stuck.</p>
-      </div>
-      <div class="card">
-        <h3>Monetize with a plan</h3>
-        <p>Learn pricing, daily workflows, and conversion messages so you turn attention into revenue the right way.</p>
-      </div>
-    </section>
+                    <!-- Hero Image -->
+                    <div class="hero-image">
+                        <img src="/hero.jpg" alt="AI model dashboard mockup" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- CTA band -->
-    <section class="cta-band container">
-      <h2>Ready to start?</h2>
-      <p>Pick a plan and unlock the 14 day launch plus ongoing resources.</p>
-      <a href="pricing.html" class="btn-main" data-append-ref>View pricing</a>
-    </section>
-  </main>
+        <!-- Short Intro Block -->
+        <section class="section-surface">
+            <div class="container" style="max-width: 800px;">
+                <div class="text-center">
+                    <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">
+                        Stop guessing what works. Our proven method gives you clarity on exactly what to post, when to post it, and how to turn followers into paying customers. This is the same system that has helped hundreds of creators go from zero to five figures monthly.
+                    </p>
+                    <p style="font-size: 1.125rem;">
+                        Whether you are starting fresh or have tried before without success, this step by step approach removes the guesswork and gives you a clear path to results. Take action today and start building your profitable AI model business.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <footer class="footer">
-    <div class="footer-links" style="margin-bottom:1rem;">
-      <a href="terms-and-conditions.html" data-append-ref>Terms of Service</a> |
-      <a href="privacy-policy.html" data-append-ref>Privacy Policy</a>
+        <!-- Proof Cases -->
+        <section class="section-surface">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>Real Results from Real Creators</h2>
+                    <p class="text-muted" style="font-size: 1.25rem;">
+                        See what others have achieved with our proven method
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div style="aspect-ratio: 16/9; background: var(--bg); border-radius: 0.5rem; margin-bottom: 1rem; overflow: hidden;">
+                            <img src="/case1.jpg" alt="Success case 1" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">
+                            She reached two thousand three hundred subs in thirty days
+                        </p>
+                        <p style="font-size: 0.75rem; color: var(--muted); margin-bottom: 1rem;">
+                            *results vary
+                        </p>
+                        <a href="https://aigirlmethod.gumroad.com/l/ckzui" class="btn btn-outline" data-gumroad="deluxe" style="width: 100%; text-align: center;">Start today</a>
+                    </div>
+
+                    <div class="card">
+                        <div style="aspect-ratio: 16/9; background: var(--bg); border-radius: 0.5rem; margin-bottom: 1rem; overflow: hidden;">
+                            <img src="/case2.jpg" alt="Success case 2" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">
+                            First month earnings over three thousand euros
+                        </p>
+                        <p style="font-size: 0.75rem; color: var(--muted); margin-bottom: 1rem;">
+                            *results vary
+                        </p>
+                        <a href="https://aigirlmethod.gumroad.com/l/ckzui" class="btn btn-outline" data-gumroad="deluxe" style="width: 100%; text-align: center;">Start today</a>
+                    </div>
+
+                    <div class="card">
+                        <div style="aspect-ratio: 16/9; background: var(--bg); border-radius: 0.5rem; margin-bottom: 1rem; overflow: hidden;">
+                            <img src="/case3.jpg" alt="Success case 3" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">
+                            Scaled to five figure monthly income in six months
+                        </p>
+                        <p style="font-size: 0.75rem; color: var(--muted); margin-bottom: 1rem;">
+                            *results vary
+                        </p>
+                        <a href="https://aigirlmethod.gumroad.com/l/ckzui" class="btn btn-outline" data-gumroad="deluxe" style="width: 100%; text-align: center;">Start today</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section id="features">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>Everything You Need to Succeed</h2>
+                    <p class="text-muted" style="font-size: 1.25rem;">
+                        Complete toolkit for launching and scaling your AI model business
+                    </p>
+                </div>
+
+                <div class="grid grid-4">
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3>Roadmap guide</h3>
+                        <p class="text-muted">Complete step by step guide from setup to scaling your AI model business</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </div>
+                        <h3>Caption and script vault</h3>
+                        <p class="text-muted">Proven captions and scripts that convert viewers into paying customers</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Posting calendar</h3>
+                        <p class="text-muted">Strategic posting schedule to maximize engagement and growth</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="feature-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                            </svg>
+                        </div>
+                        <h3>Affiliate add on</h3>
+                        <p class="text-muted">Extra income streams through our affiliate program and partnerships</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="section-surface">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>How It Works</h2>
+                    <p class="text-muted" style="font-size: 1.25rem;">
+                        Three simple steps to launch your AI model business
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="text-center">
+                        <div class="step-number">1</div>
+                        <h3>Start</h3>
+                        <p class="text-muted">Get instant access to the complete roadmap and setup your foundation</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="step-number">2</div>
+                        <h3>Follow the method</h3>
+                        <p class="text-muted">Use our proven scripts, posting calendar, and growth strategies</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="step-number">3</div>
+                        <h3>Scale</h3>
+                        <p class="text-muted">Optimize and scale your business with advanced monetization tactics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section id="benefits">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>Why Choose OnlyModelAI</h2>
+                    <p class="text-muted" style="font-size: 1.25rem;">
+                        The advantages that set us apart from the rest
+                    </p>
+                </div>
+
+                <div class="grid grid-4">
+                    <div>
+                        <svg style="width: 3rem; height: 3rem; color: var(--primary); margin-bottom: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <h3>Faster start</h3>
+                        <p class="text-muted">Skip months of trial and error with our proven roadmap</p>
+                    </div>
+
+                    <div>
+                        <svg style="width: 3rem; height: 3rem; color: var(--primary); margin-bottom: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3>Proven method</h3>
+                        <p class="text-muted">Battle tested strategies that have generated real results</p>
+                    </div>
+
+                    <div>
+                        <svg style="width: 3rem; height: 3rem; color: var(--primary); margin-bottom: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <h3>Affordable entry</h3>
+                        <p class="text-muted">Get started without breaking the bank or huge upfront costs</p>
+                    </div>
+
+                    <div>
+                        <svg style="width: 3rem; height: 3rem; color: var(--primary); margin-bottom: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        <h3>Updates every two weeks</h3>
+                        <p class="text-muted">Stay ahead with regular updates and new strategies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-surface">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>What Our Creators Say</h2>
+                    <p class="text-muted" style="font-size: 1.25rem;">
+                        Real feedback from real success stories
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="testimonial-header">
+                            <img src="/t1.jpg" alt="Sarah testimonial" class="testimonial-img" loading="lazy">
+                            <div>
+                                <h4 style="font-weight: 600;">Sarah K.</h4>
+                                <p style="font-size: 0.875rem; color: var(--muted); margin: 0;">Creator</p>
+                            </div>
+                        </div>
+                        <p>"Made first sales in two weeks. The roadmap is exactly what I needed to get started properly."</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="testimonial-header">
+                            <img src="/t2.jpg" alt="Emma testimonial" class="testimonial-img" loading="lazy">
+                            <div>
+                                <h4 style="font-weight: 600;">Emma R.</h4>
+                                <p style="font-size: 0.875rem; color: var(--muted); margin: 0;">Model</p>
+                            </div>
+                        </div>
+                        <p>"The script vault saved me so much time. I know exactly what to say to convert viewers."</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="testimonial-header">
+                            <img src="/t3.jpg" alt="Lisa testimonial" class="testimonial-img" loading="lazy">
+                            <div>
+                                <h4 style="font-weight: 600;">Lisa M.</h4>
+                                <p style="font-size: 0.875rem; color: var(--muted); margin: 0;">Entrepreneur</p>
+                            </div>
+                        </div>
+                        <p>"Finally a method that works. Went from struggling to consistent income in 6 weeks."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Preview -->
+        <section id="faq">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>Frequently Asked Questions</h2>
+                    <p class="text-muted" style="font-size: 1.25rem;">
+                        Get answers to common questions
+                    </p>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(0)">
+                            What do I get after purchase?
+                            <span id="faq-icon-0">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-0">
+                            Instant access to the complete roadmap, scripts, posting calendar, and all bonus materials.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(1)">
+                            Is this beginner friendly?
+                            <span id="faq-icon-1">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1">
+                            Absolutely. Our step by step approach is designed for complete beginners with no prior experience.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(2)">
+                            How long until I see results?
+                            <span id="faq-icon-2">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2">
+                            Most creators see their first sales within 2-4 weeks when following the method consistently.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="#faq-full" class="btn btn-outline btn-lg">View all questions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Preview -->
+        <section id="pricing" class="section-surface">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <h2>Pick your plan</h2>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>Starter</h3>
+                        <p style="font-size: 2rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">€49.99</p>
+                        <p class="text-muted" style="margin-bottom: 2rem;">one time</p>
+                        <ul style="list-style: none; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.5rem;">✓ Roadmap PDF</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Starter caption pack</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Light support by email</li>
+                        </ul>
+                        <a href="https://aigirlmethod.gumroad.com/l/zlyiw" class="btn btn-primary" data-gumroad="starter" style="width: 100%; text-align: center;">Get Starter</a>
+                    </div>
+
+                    <div class="card" style="border: 2px solid var(--primary); position: relative;">
+                        <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--primary); color: var(--bg); padding: 0.25rem 1rem; border-radius: 1rem; font-size: 0.875rem; font-weight: 600;">
+                            Most popular
+                        </div>
+                        <h3>Deluxe</h3>
+                        <p style="font-size: 2rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">€149.99</p>
+                        <p class="text-muted" style="margin-bottom: 2rem;">one time</p>
+                        <ul style="list-style: none; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.5rem;">✓ Full roadmap master doc</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Caption and script vault</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Posting calendar</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Checklists and examples</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Updates every two weeks</li>
+                        </ul>
+                        <a href="https://aigirlmethod.gumroad.com/l/ckzui" class="btn btn-primary" data-gumroad="deluxe" style="width: 100%; text-align: center;">Get Deluxe now</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>Mentorship</h3>
+                        <p style="font-size: 2rem; font-weight: bold; color: var(--primary); margin: 1rem 0;">€499.99</p>
+                        <p class="text-muted" style="margin-bottom: 2rem;">one time</p>
+                        <ul style="list-style: none; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 0.5rem;">✓ Everything in Deluxe</li>
+                            <li style="margin-bottom: 0.5rem;">✓ One to one chat guidance</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Weekly feedback</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Personalized plan</li>
+                        </ul>
+                        <a href="https://aigirlmethod.gumroad.com/l/Mentor" class="btn btn-primary" data-gumroad="mentor" style="width: 100%; text-align: center;">Apply for Mentorship</a>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 2rem;">
+                    <p class="text-muted" style="font-size: 0.875rem;">
+                        Instant access and secure payment on Gumroad
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Band -->
+        <div class="cta-band">
+            <div class="container">
+                <h2>Ready to launch your AI model girl</h2>
+                <a href="https://aigirlmethod.gumroad.com/l/ckzui" class="btn btn-lg" data-gumroad="deluxe">Get Deluxe now</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--surface); padding: 3rem 0; border-top: 1px solid var(--border);">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 3rem;">
+                <div>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">OnlyModelAI</h3>
+                    <p class="text-muted">Launch your AI model girl and start earning with a clear method.</p>
+                </div>
+                <div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <a href="#pricing" style="color: var(--muted); text-decoration: none;">Pricing</a>
+                        <a href="#roadmap" style="color: var(--muted); text-decoration: none;">Roadmap</a>
+                        <a href="#how-it-works" style="color: var(--muted); text-decoration: none;">How it works</a>
+                        <a href="#faq" style="color: var(--muted); text-decoration: none;">FAQ</a>
+                        <a href="#affiliate" style="color: var(--muted); text-decoration: none;">Affiliate</a>
+                        <a href="mailto:aigirl.launch@gmail.com" style="color: var(--muted); text-decoration: none;">Contact</a>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://instagram.com/onlymodelai.offcial/" style="color: var(--primary); text-decoration: none; margin-right: 1rem;">Instagram</a>
+                        <a href="mailto:aigirl.launch@gmail.com" style="color: var(--primary); text-decoration: none;">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                <p class="text-muted" style="font-size: 0.875rem;">
+                    © 2024 OnlyModelAI. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent banner">
+        <div class="cookie-content">
+            <p>We use cookies for basic analytics with Microsoft Clarity. Click Accept to enable. The site works without cookies.</p>
+            <button id="cookie-accept" class="btn btn-primary">Accept</button>
+        </div>
     </div>
 
-    <div class="payment-logos" aria-label="Payment methods">
-      <img src="images/paypal-logo.png" alt="PayPal"/>
-      <img src="images/mastercard-logo.png" alt="Mastercard"/>
-      <img src="images/amex-logo.png" alt="American Express"/>
-      <img src="images/applepay-logo.png" alt="Apple Pay"/>
-      <img src="images/googlepay-logo.png" alt="Google Pay"/>
-    </div>
+    <!-- JavaScript -->
+    <script>
+        // OnlyModelAI Site JavaScript - Deferred for Performance
+        
+        // Referral tracking and analytics utilities
+        const checkCookieConsent = () => {
+            return localStorage.getItem('cookie_consent') === 'yes';
+        };
 
-    <p>© 2025 OnlyModelAI. All rights reserved.</p>
+        const setCookieConsent = () => {
+            localStorage.setItem('cookie_consent', 'yes');
+        };
 
-    <div class="social-links" style="margin-top:.5rem;">
-      <a href="https://instagram.com/aigirl.launch" target="_blank" rel="noopener">Instagram</a> |
-      <span>Private Telegram (invite after purchase)</span> |
-      <a href="https://aigirlmethod.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
-    </div>
-  </footer>
+        const storeRef = (ref) => {
+            const expires = Date.now() + (30 * 24 * 60 * 60 * 1000); // 30 days
+            const refData = { value: ref, expires };
+            localStorage.setItem('ref_data', JSON.stringify(refData));
+        };
+
+        const getRef = () => {
+            try {
+                const stored = localStorage.getItem('ref_data');
+                if (!stored) return null;
+                
+                const refData = JSON.parse(stored);
+                if (Date.now() > refData.expires) {
+                    localStorage.removeItem('ref_data');
+                    return null;
+                }
+                
+                return refData.value;
+            } catch {
+                return null;
+            }
+        };
+
+        const getUrlRef = () => {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('ref');
+        };
+
+        // Auto-append ref to Gumroad links
+        const decorateGumroadLinks = () => {
+            const ref = getRef();
+            if (!ref) return;
+
+            const gumroadLinks = document.querySelectorAll('a[data-gumroad]');
+            gumroadLinks.forEach((link) => {
+                const url = new URL(link.href);
+                url.searchParams.set('ref', ref);
+                link.href = url.toString();
+            });
+        };
+
+        // Microsoft Clarity integration
+        const loadClarity = () => {
+            if (!checkCookieConsent()) return;
+
+            // Load Clarity script
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.innerHTML = `
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/pr0aig";
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script");
+            `;
+            document.head.appendChild(script);
+
+            // Set custom property for affiliate ref
+            setTimeout(() => {
+                const ref = getRef();
+                if (ref && window.clarity) {
+                    window.clarity('set', 'affiliate_ref', ref);
+                }
+            }, 1000);
+        };
+
+        // Smooth scroll utility
+        const smoothScrollTo = (elementId) => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        // FAQ Toggle Function
+        const toggleFAQ = (index) => {
+            const answer = document.getElementById(`faq-answer-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                icon.textContent = '+';
+            } else {
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach((el, i) => {
+                    el.classList.remove('show');
+                    document.getElementById(`faq-icon-${i}`).textContent = '+';
+                });
+                
+                // Open this FAQ
+                answer.classList.add('show');
+                icon.textContent = '−';
+            }
+        };
+
+        // Initialize tracking and functionality
+        const initSite = () => {
+            // Check for ref in URL and store it
+            const urlRef = getUrlRef();
+            if (urlRef) {
+                storeRef(urlRef);
+            }
+
+            // Decorate Gumroad links
+            decorateGumroadLinks();
+
+            // Cookie banner logic
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            
+            if (!checkCookieConsent()) {
+                banner.classList.add('show');
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                setCookieConsent();
+                banner.classList.remove('show');
+                loadClarity();
+            });
+
+            // Load Clarity if consent already given
+            if (checkCookieConsent()) {
+                loadClarity();
+            }
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Image lazy loading fallback for older browsers
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            img.classList.remove('lazy');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+        };
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSite);
+        } else {
+            initSite();
+        }
+
+        // Re-decorate links if they're added dynamically
+        setInterval(decorateGumroadLinks, 5000);
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "OnlyModelAI Deluxe System",
+        "description": "Complete 14-day launch system with prompts, posting strategies, and monetization templates for AI model business",
+        "brand": {
+            "@type": "Brand",
+            "name": "OnlyModelAI"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "149.99",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://aigirlmethod.gumroad.com/l/ckzui"
+        }
+    }
+    </script>
 </body>
 </html>
