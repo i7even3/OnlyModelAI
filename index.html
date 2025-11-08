@@ -1,28 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>OnlyModelAI — Launch your AI model girl with a proven method</title>
-  <meta name="description" content="A clear step by step method to create promote and monetize your AI model girl page. Instant access. Secure checkout. Updates included."/>
-  <link rel="preload" as="style" href="/styles.css"/>
-  <link rel="stylesheet" href="/styles.css"/>
-  <link rel="icon" href="/favicon.ico"/>
-  <link rel="canonical" href="https://www.onlymodelai.com/"/>
-
-  <!-- Preload hero image for fast LCP -->
-  <link rel="preload" as="image"
-        href="/assets/images/hero.webp"
-        imagesrcset="/assets/images/hero.webp"
-        imagesizes="(max-width: 900px) 100vw, 720px"/>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="OnlyModelAI — Launch your AI model girl with a proven method"/>
-  <meta property="og:description" content="Start fast with a clear method. Real tools. Real plan. Updates every two weeks."/>
-  <meta property="og:image" content="/assets/images/og-default.jpg"/>
-  <meta property="og:type" content="website"/>
-</head>
-
 <body class="bg">
   <!-- Header -->
   <header class="header">
@@ -31,6 +6,7 @@
       <a href="#features">Features</a>
       <a href="#how">How it works</a>
       <a href="#proof">Results</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -56,7 +32,7 @@
         </ul>
       </div>
       <div class="hero__art">
-        <img src="/assets/images/hero.webp" width="720" height="520"
+        <img src="/assets/images/hero-main.webp" width="720" height="520"
              fetchpriority="high" decoding="async" alt="Mockup of the roadmap and content vault"/>
       </div>
     </section>
@@ -126,6 +102,30 @@
       </div>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials" class="section surface">
+      <h2 class="section__title">What creators are saying</h2>
+      <div class="testimonials">
+        <article class="testimonial">
+          <img src="/assets/images/user1.webp" alt="Creator profile" class="testimonial__avatar">
+          <p class="testimonial__quote">“I followed the roadmap exactly and went from zero to real income in weeks. The vault alone was worth it.”</p>
+          <p class="testimonial__name">— @lisa.ai</p>
+        </article>
+
+        <article class="testimonial">
+          <img src="/assets/images/user2.webp" alt="Creator profile" class="testimonial__avatar">
+          <p class="testimonial__quote">“Everything is so clear. I used to waste hours trying random ideas — this made it simple.”</p>
+          <p class="testimonial__name">— @sofiamodel</p>
+        </article>
+
+        <article class="testimonial">
+          <img src="/assets/images/user3.webp" alt="Creator profile" class="testimonial__avatar">
+          <p class="testimonial__quote">“Best investment I made this year. The posting calendar keeps me consistent.”</p>
+          <p class="testimonial__name">— @kai.creates</p>
+        </article>
+      </div>
+    </section>
+
     <!-- Pricing -->
     <section id="pricing" class="section surface">
       <h2 class="section__title">Pick your plan</h2>
@@ -181,7 +181,7 @@
       <p class="muted center small">Instant access and secure payment on Gumroad</p>
     </section>
 
-    <!-- FAQ preview -->
+    <!-- FAQ -->
     <section id="faq" class="section">
       <h2 class="section__title">Frequently asked questions</h2>
       <div class="faq">
@@ -228,94 +228,4 @@
       <a href="https://instagram.com/onlymodelai.offcial/" rel="noopener" target="_blank">Instagram</a>
     </div>
   </footer>
-
-  <!-- Cookie banner -->
-  <div id="cookie-banner" class="cookie hidden" role="dialog" aria-live="polite">
-    <p>We use cookies for basic analytics with Microsoft Clarity and Google Analytics. Click Accept to enable. The site works without cookies.</p>
-    <button id="cookie-accept" class="btn btn-primary">Accept</button>
-  </div>
-
-  <!-- Single loader: ref, consent, Clarity, GA4, events -->
-  <script>
-  (function () {
-    const qs = new URLSearchParams(location.search);
-    const ref = qs.get('ref');
-
-    function setLS(k,v){try{localStorage.setItem(k,v)}catch(e){}}
-    function getLS(k){try{return localStorage.getItem(k)}catch(e){return null}}
-
-    function storeRef(v){
-      setLS('ref_value', v);
-      setLS('ref_expires', String(Date.now()+30*24*60*60*1000));
-    }
-    function getRef(){
-      const v = getLS('ref_value');
-      const e = Number(getLS('ref_expires')||0);
-      if(!v || Date.now()>e) return null;
-      return v;
-    }
-
-    if(ref) storeRef(ref);
-    const activeRef = ref || getRef();
-
-    document.addEventListener('DOMContentLoaded', function(){
-      // append ?ref to Gumroad links
-      document.querySelectorAll('[data-gumroad]').forEach(a=>{
-        try{
-          const u = new URL(a.href);
-          if(activeRef) u.searchParams.set('ref', activeRef);
-          a.href = u.toString();
-        }catch(e){}
-      });
-    });
-
-    // Consent + analytics
-    const banner = document.getElementById('cookie-banner');
-    const accept = document.getElementById('cookie-accept');
-    const consent = getLS('cookie_consent')==='yes';
-
-    function loadClarity(){
-      if (window.clarity) return;
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+"pr0aig";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script");
-      if (activeRef) { try { clarity("set","affiliate_ref", activeRef); } catch(e){} }
-    }
-
-    function loadGA4(){
-      if (window.dataLayer) return;
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)} window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX', { user_properties: { affiliate_ref: activeRef || '(none)' }});
-      var s = document.createElement('script');
-      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
-      document.head.appendChild(s);
-    }
-
-    function enableAnalytics(){ loadClarity(); loadGA4(); }
-
-    if(!consent){
-      banner.classList.remove('hidden');
-      accept.addEventListener('click', function(){
-        setLS('cookie_consent','yes');
-        banner.classList.add('hidden');
-        enableAnalytics();
-      });
-    } else {
-      enableAnalytics();
-    }
-
-    // Simple event helper for plan clicks
-    window.OMAI = {
-      trackPlanClick: function(label){
-        try { gtag('event','plan_click',{plan:label}); } catch(e){}
-        try { clarity('event','plan_click'); clarity('set','plan_clicked',label); } catch(e){}
-      }
-    };
-  })();
-  </script>
 </body>
-</html>
