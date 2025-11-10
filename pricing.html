@@ -1,279 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="OnlyModelAI pricing plans — Starter, Deluxe and Mentorship."/>
-  <title>Pricing | OnlyModelAI</title>
-  <link rel="stylesheet" href="styles.css"/>
-
-  <!-- Microsoft Clarity Heatmap Tracking -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "su9d6i4k9o");
-  </script>
-
-  <!-- Referral capture + auto-append to Gumroad links -->
-  <script>
-    (function () {
-      const qs = new URLSearchParams(location.search);
-      const ref = qs.get('ref');
-      if (ref) localStorage.setItem('referral', ref);
-
-      addEventListener('DOMContentLoaded', () => {
-        const stored = localStorage.getItem('referral');
-        if (!stored) return;
-        document.querySelectorAll('a[data-append-ref="true"]').forEach(a => {
-          try {
-            const u = new URL(a.href);
-            if (!u.searchParams.get('ref')) {
-              u.searchParams.set('ref', stored);
-              a.href = u.toString();
-            }
-          } catch(e){}
-        });
-      });
-    })();
-  </script>
-
-  <!-- Minimal overrides (keeps your existing styles.css) -->
-  <style>
-    /* equal-height cards + space for badge */
-    .cards{ align-items:stretch; }
-    .card{
-      position:relative;
-      display:flex;
-      flex-direction:column;
-      min-height:560px;
-      padding-top:40px; /* ensures badge never overlaps title */
-    }
-    .card h2{ margin-top:0; }
-    .card ul{ line-height:1.55; }
-
-    /* deluxe highlight (gold glow) */
-    .card--featured{
-      border:1px solid rgba(255,217,124,.65);
-      box-shadow:
-        0 0 18px rgba(255,217,124,.48),
-        0 0 44px rgba(255,217,124,.36),
-        0 18px 50px rgba(0,0,0,.55);
-      z-index:1;
-    }
-    /* best seller badge: top-left + glow */
-    .card--featured .badge{
-      position:absolute;
-      top:12px;
-      left:14px;
-      right:auto;
-      transform:none;
-      z-index:3;
-      background:#FFD97C;
-      color:#111;
-      font-weight:800;
-      font-size:.78rem;
-      padding:6px 12px;
-      border-radius:8px;
-      text-transform:lowercase;
-      box-shadow:
-        0 0 12px rgba(255,217,124,.9),
-        0 0 26px rgba(255,217,124,.6);
-    }
-
-    /* CTA alignment */
-    .card-footer{ margin-top:auto; display:flex; flex-direction:column; gap:12px; }
-    .btn-main{
-      display:block;
-      width:100%;
-      max-width:380px;
-      margin:0 auto;
-      padding:14px 18px;
-      border-radius:10px;
-    }
-
-    /* alt-pay button look */
-    .alt-pay summary{ cursor:pointer; }
-    .alt-pay-content .btn-alt{
-      display:block;
-      text-align:center;
-      margin-top:8px;
-      padding:10px 12px;
-      border-radius:8px;
-      border:1px solid rgba(255,255,255,.15);
-      background:rgba(255,255,255,.06);
-      color:#fff;
-      text-decoration:none;
-    }
-    .alt-pay-content .btn-alt:hover{ background:rgba(255,255,255,.10); }
-
-    /* comparison table (checks/red X only here) */
-    .comparison-table h2{ color:#FFD97C; text-align:center; }
-    .comparison-table table{ width:100%; border-collapse:collapse; overflow:hidden; border-radius:10px; background:rgba(255,255,255,.03); }
-    .comparison-table th, .comparison-table td{ padding:12px; text-align:center; border:1px solid rgba(255,255,255,.08); }
-    .comparison-table th{ background:rgba(255,255,255,.06); }
-    .comparison-table td.green{ color:#2ecc71; font-weight:700; }
-    .comparison-table td.red{ color:#e74c3c; font-weight:700; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#071a3b" />
+  <title>Pricing - OnlyModelAI</title>
+  <meta name="description" content="Pricing plans for OnlyModelAI. One time payments and lifetime access." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="nav">
-    <div class="logo"><a href="index.html">OnlyModelAI</a></div>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="roadmap.html">Roadmap</a></li>
-        <li><a class="active" href="pricing.html">Pricing</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container nav-inner">
+      <a class="brand" href="/">OnlyModel<span class="brand-accent">AI</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta"><a class="btn btn-primary" href="https://onlymodelai.gumroad.com/l/deluxe">Start Now</a></div>
+      <button class="nav-toggle">☰</button>
+    </div>
   </header>
 
-  <section class="container">
-    <h1>Choose Your Plan</h1>
-
-    <div class="cards">
-
-      <!-- STARTER -->
-      <div class="card">
-        <h2>Starter</h2>
-        <p>€49.99 one time</p>
-        <ul>
-          <li>14 Day Launch Plan</li>
-          <li>Prompt Outline</li>
-          <li>Free Tools</li>
-          <li>Posting Templates</li>
-          <li>Private Telegram access (invite after purchase)</li>
-        </ul>
-
-        <div class="card-footer">
-          <a
-            href="https://aigirlmethod.gumroad.com/l/zlyiw?_gl=1*rw9xdv*_ga*MTEyMjkzMTM4Ny4xNzUwMTg1NjEx*_ga_6LJN6D94N6*czE3NTUyMDg2NTkkbzY3JGcxJHQxNzU1MjA4Njc5JGo0MCRsMCRoMA.."
-            class="btn-main" target="_blank" rel="noopener"
-            aria-label="Buy Starter on Gumroad" data-append-ref="true"
-          >Join Starter</a>
-
-          <details class="alt-pay">
-            <summary>Alternative payment methods</summary>
-            <div class="alt-pay-content">
-              <a class="btn-alt" href="https://paypal.me/your-starter-link" target="_blank" rel="noopener">Pay with PayPal</a>
-              <a class="btn-alt" href="https://your-crypto-checkout.example/starter" target="_blank" rel="noopener">Pay with Crypto</a>
-            </div>
-          </details>
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h1>Pick your plan</h1>
+          <p class="muted">All plans include instant lifetime access. Upgrade anytime.</p>
         </div>
-      </div>
 
-      <!-- DELUXE (Best Seller) -->
-      <div class="card card--featured">
-        <div class="badge">best seller</div>
-        <h2>Deluxe</h2>
-        <p>€149.99 one time</p>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Access key to private Telegram</li>
-          <li>Prompt Archive unlocked</li>
-          <li>Swipe files and strategy packs</li>
-          <li>Content creation stack + free updates</li>
-        </ul>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Starter</h3>
+            <div class="price">€37.50</div>
+            <p>Complete roadmap to launch, Starter caption pack, Algorithm training basics, Email support.</p>
+            <a class="btn btn-outline" href="https://aigirlmethod.gumroad.com/l/zlyiw">Get Starter</a>
+          </div>
 
-        <div class="card-footer">
-          <a
-            href="https://aigirlmethod.gumroad.com/l/ckzui"
-            class="btn-main" target="_blank" rel="noopener"
-            aria-label="Buy Deluxe on Gumroad" data-append-ref="true"
-          >Get Deluxe</a>
+          <div class="card popular">
+            <h3>Deluxe</h3>
+            <div class="price">€149.99</div>
+            <p>Full roadmap, Complete caption and script vault, Posting calendar and checklist, Case examples, Monthly updates.</p>
+            <a class="btn btn-cta" href="https://aigirlmethod.gumroad.com/l/ckzui">Get Deluxe</a>
+          </div>
 
-          <details class="alt-pay">
-            <summary>Alternative payment methods</summary>
-            <div class="alt-pay-content">
-              <a class="btn-alt" href="https://paypal.me/your-deluxe-link" target="_blank" rel="noopener">Pay with PayPal</a>
-              <a class="btn-alt" href="https://your-crypto-checkout.example/deluxe" target="_blank" rel="noopener">Pay with Crypto</a>
-            </div>
-          </details>
+          <div class="card">
+            <h3>Mentorship</h3>
+            <div class="price">€499.99</div>
+            <p>Everything in Deluxe, One on one chat guidance, Weekly feedback and plan review.</p>
+            <a class="btn btn-outline" href="https://aigirlmethod.gumroad.com/l/Mentor">Join Mentorship</a>
+          </div>
         </div>
-      </div>
 
-      <!-- MENTORSHIP -->
-      <div class="card">
-        <h2>Mentorship</h2>
-        <p>€499.99 one time</p>
-        <ul>
-          <li>All Deluxe features</li>
-          <li>One on one coaching</li>
-          <li>Custom audit and growth plan</li>
-          <li>Priority access and feedback</li>
-        </ul>
-
-        <div class="card-footer">
-          <a
-            href="https://aigirlmethod.gumroad.com/l/Mentor"
-            class="btn-main" target="_blank" rel="noopener"
-            aria-label="Apply for Mentorship on Gumroad" data-append-ref="true"
-          >Apply for Mentorship</a>
-
-          <details class="alt-pay">
-            <summary>Alternative payment methods</summary>
-            <div class="alt-pay-content">
-              <a class="btn-alt" href="https://paypal.me/your-mentorship-link" target="_blank" rel="noopener">Pay with PayPal</a>
-              <a class="btn-alt" href="https://your-crypto-checkout.example/mentorship" target="_blank" rel="noopener">Pay with Crypto</a>
-            </div>
-          </details>
+        <div class="pricing-comparison card">
+          <h3>Comparison</h3>
+          <table>
+            <thead><tr><th>Feature</th><th>Starter</th><th>Deluxe</th><th>Mentorship</th></tr></thead>
+            <tbody>
+              <tr><td>Roadmap</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Caption vault</td><td>Some</td><td>Full</td><td>Full</td></tr>
+              <tr><td>Posting calendar</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Mentorship</td><td>No</td><td>No</td><td>Yes</td></tr>
+            </tbody>
+          </table>
         </div>
+
       </div>
-
-    </div>
-  </section>
-
-  <!-- COMPARISON TABLE (ONLY place with green ✓ and red ✗) -->
-  <section class="comparison-table container">
-    <h2>Compare Plans</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Starter</th>
-          <th>Deluxe</th>
-          <th>Mentorship</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>14 Day Launch Plan</td><td class="green">✓</td><td class="green">✓</td><td class="green">✓</td></tr>
-        <tr><td>Prompt Outline</td><td class="green">✓</td><td class="green">✓</td><td class="green">✓</td></tr>
-        <tr><td>Private Telegram Access</td><td class="green">✓</td><td class="green">✓</td><td class="green">✓</td></tr>
-        <tr><td>Prompt Archive Unlocked</td><td class="red">✗</td><td class="green">✓</td><td class="green">✓</td></tr>
-        <tr><td>Swipe Files & Strategy Packs</td><td class="red">✗</td><td class="green">✓</td><td class="green">✓</td></tr>
-        <tr><td>Content Creation Stack & Updates</td><td class="red">✗</td><td class="green">✓</td><td class="green">✓</td></tr>
-        <tr><td>One on One Coaching</td><td class="red">✗</td><td class="red">✗</td><td class="green">✓</td></tr>
-        <tr><td>Custom Audit & Growth Plan</td><td class="red">✗</td><td class="red">✗</td><td class="green">✓</td></tr>
-        <tr><td>Priority Access & Feedback</td><td class="red">✗</td><td class="red">✗</td><td class="green">✓</td></tr>
-      </tbody>
-    </table>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
-    <div class="footer-links" style="margin-bottom:1rem;">
-      <a href="terms-and-conditions.html">Terms of Service</a> |
-      <a href="privacy-policy.html">Privacy Policy</a>
-    </div>
-
-    <div class="payment-logos">
-      <img src="images/paypal-logo.png" alt="PayPal" />
-      <img src="images/mastercard-logo.png" alt="Mastercard" />
-      <img src="images/amex-logo.png" alt="American Express" />
-      <img src="images/applepay-logo.png" alt="Apple Pay" />
-      <img src="images/googlepay-logo.png" alt="Google Pay" />
-    </div>
-
-    <p style="margin-top:1rem;">© 2025 OnlyModelAI. All rights reserved.</p>
-
-    <div class="social-links" style="margin-top:.5rem;">
-      <a href="https://instagram.com/aigirl.launch" target="_blank" rel="noopener">Instagram</a> |
-      <span>Private Telegram (invite after purchase)</span> |
-      <a href="https://aigirlmethod.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+    <div class="container footer-inner">
+      <div class="footer-brand"><strong>OnlyModel<span class="brand-accent">AI</span></strong><div class="muted">Launch your AI model brand with a proven system.</div></div>
+      <nav class="footer-links"><a href="/">Home</a><a href="testimonials.html">Testimonials</a></nav>
+      <div class="footer-copy">© 2025 OnlyModelAI</div>
     </div>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
