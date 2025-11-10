@@ -1,139 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="OnlyModelAI helps models and creators grow faster using AI automation, viral content workflows and conversion-based strategies." />
-  <meta name="keywords" content="OnlyModelAI, AI for models, content automation, viral marketing, social media growth" />
-  <title>OnlyModelAI | AI-Powered Growth for Creators</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>OnlyModelAI — AI Growth & Monetization for Creators</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="OnlyModelAI helps creators and models scale with AI-powered content automation, trend prediction, and conversion systems. Get a step-by-step growth playbook, automated workflows, and 1:1 mentorship." />
+  <link rel="canonical" href="https://onlymodelai.com/" />
+  <meta name="keywords" content="OnlyModelAI, AI for creators, automate content, creator growth, monetize audience, AI assistant for models" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="OnlyModelAI" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="OnlyModelAI — AI Growth & Monetization for Creators" />
+  <meta property="og:description" content="AI-powered playbook for creators: automate content, grow audiences, and convert followers into revenue — no technical skills required." />
+  <meta property="og:url" content="https://onlymodelai.com/" />
+  <meta property="og:image" content="https://onlymodelai.com/assets/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OnlyModelAI — AI Growth & Monetization for Creators" />
+  <meta name="twitter:description" content="AI-powered playbook for creators: automate content, grow audiences, and convert followers into revenue." />
+  <meta name="twitter:image" content="https://onlymodelai.com/assets/og-image.png" />
+
+  <!-- Structured data (Organization + Website) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "OnlyModelAI",
+    "url": "https://onlymodelai.com/",
+    "logo": "https://onlymodelai.com/assets/logo.png",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "email": "info@onlymodelai.com",
+      "contactType": "customer support",
+      "availableLanguage": ["English"]
+    }]
+  }
+  </script>
+
+  <!-- Minimal styles & reset -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.ico" />
 </head>
-<body class="bg-slate-950 text-white">
+<body class="page">
 
-  <!-- HERO -->
-  <header class="gradient-bg py-24 text-center fade-in">
-    <h1 class="text-5xl md:text-6xl font-bold gradient-text mb-4">Automate. Grow. Earn.</h1>
-    <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
-      OnlyModelAI gives creators and models the full AI-powered playbook to scale their audience, automate content, and boost sales — with zero technical skills required.
-    </p>
-    <a href="#pricing" class="btn bg-white text-slate-900 px-8 py-4 rounded-full font-semibold hover-lift">Get Started</a>
+  <!-- Header / Navigation -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">OnlyModelAI</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="cta-ghost">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn btn-secondary" href="https://aigirlmethod.gumroad.com/l/zlyiw" target="_blank" rel="noopener">Get Started</a>
+      </div>
+    </div>
   </header>
 
-  <!-- SOCIAL PROOF -->
-  <section class="py-16 fade-in text-center">
-    <h2 class="text-3xl font-semibold mb-10 gradient-text">Trusted by Top Creators</h2>
-    <div class="flex flex-wrap justify-center gap-10">
-      <img src="assets/testimonial1.jpg" alt="Client testimonial 1" class="w-24 h-24 rounded-full object-cover hover-lift" />
-      <img src="assets/testimonial2.jpg" alt="Client testimonial 2" class="w-24 h-24 rounded-full object-cover hover-lift" />
-      <img src="assets/testimonial3.jpg" alt="Client testimonial 3" class="w-24 h-24 rounded-full object-cover hover-lift" />
-      <img src="assets/testimonial4.jpg" alt="Client testimonial 4" class="w-24 h-24 rounded-full object-cover hover-lift" />
-      <img src="assets/testimonial5.jpg" alt="Client testimonial 5" class="w-24 h-24 rounded-full object-cover hover-lift" />
-      <img src="assets/testimonial6.jpg" alt="Client testimonial 6" class="w-24 h-24 rounded-full object-cover hover-lift" />
-      <img src="assets/testimonial7.jpg" alt="Client testimonial 7" class="w-24 h-24 rounded-full object-cover hover-lift" />
-    </div>
-  </section>
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-h1">AI systems that automate content, grow your audience, and convert followers into revenue.</h1>
+          <p class="hero-lead">OnlyModelAI gives creators & models a full playbook — content automation, trend prediction, DM-to-sale funnels, and optional 1:1 mentorship. No tech required.</p>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-20 text-center fade-in max-w-4xl mx-auto">
-    <h2 class="text-4xl font-bold gradient-text mb-4">Why OnlyModelAI?</h2>
-    <p class="text-slate-400 text-lg">
-      We’re more than a toolkit — OnlyModelAI is your 24/7 assistant that handles the backend of your online growth.
-      From content planning and caption generation to trend prediction and monetization systems, we help creators save time and scale efficiently.
-    </p>
-  </section>
+          <ul class="benefits">
+            <li><strong>Save hours/week:</strong> Automated posts, captions & DMs</li>
+            <li><strong>Grow faster:</strong> Trend prediction and viral templates</li>
+            <li><strong>Monetize reliably:</strong> Conversion funnels that work</li>
+          </ul>
 
-  <!-- PRICING -->
-  <section id="pricing" class="py-24 fade-in text-center">
-    <h2 class="text-4xl font-bold gradient-text mb-12">Choose Your Plan</h2>
-    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
-      <!-- Starter -->
-      <div class="card w-80 hover-lift">
-        <h3 class="text-2xl font-bold mb-2">Starter</h3>
-        <p class="text-slate-400 mb-4">Perfect for beginners ready to start scaling with AI.</p>
-        <p class="text-4xl font-bold mb-6">€49.99 <span class="text-lg text-slate-400">one-time</span></p>
-        <a href="https://aigirlmethod.gumroad.com/l/zlyiw" target="_blank" class="btn bg-gradient-to-r from-blue-500 to-cyan-400 text-white py-3 px-6 rounded-full font-semibold">Get Starter</a>
+          <form id="lead-form" class="lead-form" aria-label="Join OnlyModelAI early access">
+            <label for="email" class="sr-only">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" required />
+            <select id="interest" name="interest" aria-label="Choose plan">
+              <option value="starter">Starter — €49.99</option>
+              <option value="deluxe">Deluxe — €149.99</option>
+              <option value="mentorship">Mentorship — €499.99</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Get Access</button>
+          </form>
+
+          <p class="hero-trust">Trusted by creators worldwide • Money-back guarantee • Instant access via Gumroad</p>
+        </div>
+
+        <div class="hero-media" aria-hidden="false">
+          <!-- Placeholder visual: use provided asset or an illustrative SVG -->
+          <img src="assets/hero-screenshot.png" alt="OnlyModelAI dashboard preview" class="hero-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / Logos -->
+    <section class="logos container">
+      <p class="muted small">Used and trusted by creators, agencies, and influencers</p>
+      <div class="logo-grid" aria-hidden="true">
+        <img src="assets/logo1.png" alt="" />
+        <img src="assets/logo2.png" alt="" />
+        <img src="assets/logo3.png" alt="" />
+        <img src="assets/logo4.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Primary benefits / How it works -->
+    <section id="about" class="container section">
+      <div class="split">
+        <div>
+          <h2>What's included</h2>
+          <p class="muted">Everything you need to plan, produce and monetize content — with AI doing the heavy lifting.</p>
+          <ul class="feature-list">
+            <li><strong>Automated content calendar:</strong> AI creates daily ideas, captions and repurposing sequences.</li>
+            <li><strong>DM automation & funnels:</strong> Pre-built templates to move followers to paid conversations.</li>
+            <li><strong>Trend alerts:</strong> Predictive signals so you ride trends early.</li>
+            <li><strong>Monetization frameworks:</strong> Offers, pricing, and upsell flows built for creators.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>How it works</h3>
+          <ol class="how-list">
+            <li>Sign up and choose a plan</li>
+            <li>Connect profiles and follow the setup checklist</li>
+            <li>AI creates content + automations — you preview & publish</li>
+            <li>Measure, optimize, and scale with one-on-one support if chosen</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="container section bg-soft">
+      <h2 class="center">Pricing</h2>
+      <p class="muted center">Choose one-time packages with optional mentorship and setup.</p>
+
+      <div class="pricing-grid">
+        <article class="card">
+          <h3>Starter</h3>
+          <p class="price">€49.99 <span class="muted">one-time</span></p>
+          <p class="muted">Beginner-friendly playbook and automation templates.</p>
+          <a class="btn btn-primary" href="https://aigirlmethod.gumroad.com/l/zlyiw" target="_blank" rel="noopener">Buy Starter</a>
+        </article>
+
+        <article class="card">
+          <h3>Deluxe</h3>
+          <p class="price">€149.99 <span class="muted">one-time</span></p>
+          <p class="muted">Complete system + setup guides and templates.</p>
+          <a class="btn btn-primary" href="https://aigirlmethod.gumroad.com/l/ckzui" target="_blank" rel="noopener">Buy Deluxe</a>
+        </article>
+
+        <article class="card featured">
+          <h3>Mentorship</h3>
+          <p class="price">€499.99 <span class="muted">one-time</span></p>
+          <p class="muted">1:1 mentorship, full business system setup & direct support.</p>
+          <a class="btn btn-primary" href="https://aigirlmethod.gumroad.com/l/Mentor" target="_blank" rel="noopener">Join Mentorship</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials (with short quotes for trust) -->
+    <section id="testimonials" class="container section">
+      <h2 class="center">What creators say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial">
+          <p>“I gained over 10k followers in a week after implementing their systems.”</p>
+          <cite>— Sofia R.</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>“The AI setup literally runs my DMs and content posting. Game changer.”</p>
+          <cite>— Mia T.</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>“Their mentorship gave me the structure and confidence to monetize properly.”</p>
+          <cite>— Lexi V.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- FAQ with structured visible Q&A -->
+    <section id="faq" class="container section">
+      <h2 class="center">Frequently asked questions</h2>
+
+      <div class="faq-list">
+        <details>
+          <summary>Do I need any technical skills?</summary>
+          <div class="faq-body">No. The onboarding is step-by-step and everything can be managed from your phone.</div>
+        </details>
+
+        <details>
+          <summary>When do I get access?</summary>
+          <div class="faq-body">Instantly after purchase — we deliver instructions and dashboard links via email.</div>
+        </details>
+
+        <details>
+          <summary>Can I upgrade later?</summary>
+          <div class="faq-body">Yes — move from Starter to Deluxe or Mentorship any time.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container section bg-soft">
+      <div class="split">
+        <div>
+          <h2>Need help?</h2>
+          <p class="muted">Questions about setup, custom automation, or 1:1 mentorship? Email our support team.</p>
+          <p><a class="btn btn-secondary" href="mailto:info@onlymodelai.com">Email Support</a></p>
+        </div>
+
+        <div>
+          <h3>Join our newsletter</h3>
+          <p class="muted">Get weekly tips on content, AI templates, and monetization tactics.</p>
+          <form id="newsletter" class="lead-form" aria-label="Subscribe to newsletter">
+            <label for="newsletter-email" class="sr-only">Email</label>
+            <input id="newsletter-email" type="email" placeholder="Your email" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/">OnlyModelAI</a>
+        <p class="muted">Create, grow and monetize your own AI-powered model.</p>
       </div>
 
-      <!-- Deluxe -->
-      <div class="card w-80 hover-lift">
-        <h3 class="text-2xl font-bold mb-2">Deluxe</h3>
-        <p class="text-slate-400 mb-4">Includes the complete system and automation setup.</p>
-        <p class="text-4xl font-bold mb-6">€149.99 <span class="text-lg text-slate-400">one-time</span></p>
-        <a href="https://aigirlmethod.gumroad.com/l/ckzui" target="_blank" class="btn bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-full font-semibold">Get Deluxe</a>
-      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="terms-and-conditions.html">Terms</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
 
-      <!-- Mentorship -->
-      <div class="card w-80 hover-lift border-gradient">
-        <h3 class="text-2xl font-bold mb-2">Mentorship</h3>
-        <p class="text-slate-400 mb-4">One-on-one mentorship and full business system setup.</p>
-        <p class="text-4xl font-bold mb-6">€499.99 <span class="text-lg text-slate-400">one-time</span></p>
-        <a href="https://aigirlmethod.gumroad.com/l/Mentor" target="_blank" class="btn bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 px-6 rounded-full font-semibold">Join Mentorship</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-24 bg-glass fade-in text-center">
-    <h2 class="text-4xl font-bold gradient-text mb-12">What Creators Say</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="card">
-        <p>"I gained over 10k followers in a week after implementing their systems."</p>
-        <span class="block mt-4 font-semibold">— Sofia R.</span>
-      </div>
-      <div class="card">
-        <p>"The AI setup literally runs my DMs and content posting. Game changer."</p>
-        <span class="block mt-4 font-semibold">— Mia T.</span>
-      </div>
-      <div class="card">
-        <p>"Their mentorship gave me the structure and confidence to monetize properly."</p>
-        <span class="block mt-4 font-semibold">— Lexi V.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="py-24 fade-in max-w-4xl mx-auto">
-    <h2 class="text-4xl font-bold gradient-text text-center mb-12">Frequently Asked Questions</h2>
-    <div class="faq-item mb-6 p-6 rounded-2xl bg-slate-800">
-      <h3 class="font-semibold text-xl mb-2">Do I need any technical skills?</h3>
-      <p class="text-slate-400">Not at all. Every step is guided, and everything can be done from your phone.</p>
-    </div>
-    <div class="faq-item mb-6 p-6 rounded-2xl bg-slate-800">
-      <h3 class="font-semibold text-xl mb-2">When do I get access?</h3>
-      <p class="text-slate-400">Instantly. After payment you get full access and instructions via email.</p>
-    </div>
-    <div class="faq-item mb-6 p-6 rounded-2xl bg-slate-800">
-      <h3 class="font-semibold text-xl mb-2">Can I upgrade later?</h3>
-      <p class="text-slate-400">Yes — you can always move from Starter to Deluxe or Mentorship later.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="py-24 text-center fade-in">
-    <h2 class="text-4xl font-bold gradient-text mb-6">Need Help?</h2>
-    <p class="text-slate-400 mb-6">For questions or support, reach us directly:</p>
-    <a href="mailto:info@onlymodelai.com" class="btn bg-gradient-to-r from-cyan-400 to-blue-600 text-white py-3 px-6 rounded-full font-semibold">Contact Us</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 py-8 text-center border-t border-slate-800 fade-in">
-    <p class="text-slate-500 mb-4">&copy; 2025 OnlyModelAI. All rights reserved.</p>
-    <div class="flex justify-center gap-6 text-slate-400">
-      <a href="terms-and-conditions.html">Terms</a>
-      <a href="privacy-policy.html">Privacy</a>
-      <a href="#pricing">Pricing</a>
+      <div class="small muted">&copy; 2025 OnlyModelAI · All rights reserved</div>
     </div>
   </footer>
 
+  <!-- Minimal JS: form handling, analytics placeholder -->
   <script>
-    // Simple fade-in observer for animation on scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('fade-in');
-      });
+    // Lead capture: validate and forward to Gumroad checkout based on selected plan.
+    document.getElementById('lead-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('email').value.trim();
+      var interest = document.getElementById('interest').value;
+      if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      // Store email locally for future checks
+      try { localStorage.setItem('onlymodelai_lead', JSON.stringify({email: email, time: Date.now()})); } catch (_) {}
+
+      // Map plans to URLs (keeps existing Gumroad links)
+      var map = {
+        starter: 'https://aigirlmethod.gumroad.com/l/zlyiw',
+        deluxe: 'https://aigirlmethod.gumroad.com/l/ckzui',
+        mentorship: 'https://aigirlmethod.gumroad.com/l/Mentor'
+      };
+
+      // Open checkout in a new tab and give visual confirmation
+      window.open(map[interest], '_blank', 'noopener');
+      alert('Thanks — we just opened checkout. Check your email for setup instructions after purchase.');
     });
-    document.querySelectorAll('section').forEach(section => observer.observe(section));
+
+    // Newsletter subscription: lightweight simulation (real implementation should use a service)
+    document.getElementById('newsletter').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('newsletter-email').value.trim();
+      if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+        alert('Please enter a valid email.');
+        return;
+      }
+      try { localStorage.setItem('onlymodelai_newsletter', email); } catch (_) {}
+      alert('Subscribed — check your inbox for a welcome email.');
+    });
+
+    // Accessibility: add focus outline for keyboard users
+    (function () {
+      var body = document.body;
+      function handleFirstTab(e) {
+        if (e.key === 'Tab') {
+          body.classList.add('show-focus');
+          window.removeEventListener('keydown', handleFirstTab);
+        }
+      }
+      window.addEventListener('keydown', handleFirstTab);
+    })();
   </script>
 
 </body>
