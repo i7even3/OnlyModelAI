@@ -1,361 +1,174 @@
-/* ========================================
-   GLOBAL RESET & BASE STYLES
-======================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ===============================
+   Base Styles & Global Setup
+================================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', 'Poppins', sans-serif;
-  background: #ffffff;
-  color: #111111;
-  line-height: 1.6;
-  overflow-x: hidden;
+  @apply bg-slate-950 text-white font-sans antialiased;
 }
 
-/* Color Palette */
-:root {
-  --primary: #000000;
-  --text: #222;
-  --light-gray: #f7f7f7;
-  --gradient: linear-gradient(90deg, #3b82f6 0%, #9333ea 100%);
+/* ===============================
+   Animation Utilities
+================================== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Typography */
-h1, h2, h3 {
-  font-weight: 700;
-  color: #111;
-}
-p {
-  color: var(--text);
-  font-size: 1rem;
-  line-height: 1.6;
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
 }
 
-/* ========================================
-   BUTTONS
-======================================== */
-.btn-primary {
-  display: inline-block;
-  background: var(--gradient);
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.opacity-0 {
+  opacity: 0;
+}
+
+/* ===============================
+   Hover & Transition Effects
+================================== */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ===============================
+   Gradient Text & Backgrounds
+================================== */
+.gradient-text {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4, #9333ea);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===============================
+   Button Customizations
+================================== */
+button,
+.btn {
   transition: all 0.3s ease;
 }
-.btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
 
-.btn-outline {
-  border: 2px solid #000;
-  color: #000;
-  padding: 12px 26px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.btn-outline:hover {
-  background: var(--gradient);
-  color: #fff;
-  border: none;
+button:hover,
+.btn:hover {
   transform: translateY(-2px);
 }
 
-/* ========================================
-   ANNOUNCEMENT BAR
-======================================== */
-.announcement-bar {
-  background: var(--gradient);
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  font-size: 0.95rem;
-  letter-spacing: 0.4px;
-  animation: slideDown 0.7s ease-out forwards;
-}
-@keyframes slideDown {
-  0% { transform: translateY(-100%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+/* ===============================
+   Cards (Testimonials, Pricing, etc.)
+================================== */
+.card {
+  @apply bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-xl transition-transform duration-300;
 }
 
-/* ========================================
-   NAVIGATION
-======================================== */
-header.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 10%;
-  position: sticky;
-  top: 0;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  z-index: 100;
-}
-.nav .logo {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #000;
-}
-.nav nav a {
-  color: #000;
-  margin-left: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-.nav nav a:hover {
-  color: #6b21a8;
-}
-.btn-nav {
-  background: var(--gradient);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-left: 25px;
-  transition: all 0.3s;
-}
-.btn-nav:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.card:hover {
+  transform: translateY(-5px);
 }
 
-/* ========================================
-   HERO SECTION
-======================================== */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 120px 10%;
-  background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+/* ===============================
+   Section Styling
+================================== */
+section {
   position: relative;
   overflow: hidden;
 }
-.hero-content {
-  flex: 1 1 500px;
-  animation: fadeInUp 0.8s ease forwards;
-}
-.hero h1 {
-  font-size: 3rem;
-  max-width: 520px;
-  line-height: 1.2;
-}
-.hero p {
-  font-size: 1.15rem;
-  margin: 20px 0 30px;
-  max-width: 500px;
-}
-.hero-img {
-  flex: 1 1 450px;
-  max-width: 520px;
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-  animation: fadeIn 1.1s ease forwards;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+
+section h2 {
+  @apply font-bold text-center;
 }
 
-/* Subtle hero overlay animation */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 40%, rgba(59,130,246,0.15), transparent 70%);
-  animation: moveGlow 6s infinite alternate ease-in-out;
-}
-@keyframes moveGlow {
-  from { background-position: 20% 40%; }
-  to { background-position: 80% 60%; }
+section p {
+  @apply text-slate-400 text-lg leading-relaxed;
 }
 
-/* ========================================
-   FEATURES SECTION
-======================================== */
-.features {
-  background: #fff;
-  text-align: center;
-}
-.features h2 {
-  font-size: 2.2rem;
-}
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px;
-  margin-top: 50px;
-}
-.features-grid div {
-  background: var(--light-gray);
-  border-radius: 14px;
-  padding: 40px 30px;
-  transition: all 0.3s;
-}
-.features-grid div:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+/* ===============================
+   FAQ Animations
+================================== */
+.faq-item {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ========================================
-   TESTIMONIALS
-======================================== */
-.testimonials {
-  background: #fafafa;
-  text-align: center;
-  padding: 100px 10%;
-}
-.testimonials h2 {
-  font-size: 2.2rem;
-}
-.testimonial-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 50px;
-}
-.testimonial {
-  background: #fff;
-  padding: 35px;
-  border-radius: 16px;
-  max-width: 300px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-.testimonial:hover {
-  transform: scale(1.05);
-}
-.testimonial-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid transparent;
-  background: var(--gradient);
-  padding: 2px;
-}
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-}
-.testimonial span {
-  color: #666;
-  font-size: 0.9rem;
+.faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
 }
 
-/* ========================================
-   CTA SECTION
-======================================== */
-.cta {
-  background: var(--gradient);
-  color: #fff;
-  text-align: center;
-  padding: 120px 10%;
-  border-radius: 0;
-}
-.cta h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-.cta .btn-primary {
-  background: #fff;
-  color: #000;
-  margin-top: 25px;
-}
-.cta .btn-primary:hover {
-  transform: translateY(-3px);
-}
-.cta .guarantee {
-  font-size: 0.9rem;
-  margin-top: 15px;
-  opacity: 0.85;
+/* ===============================
+   Contact Form Styles
+================================== */
+input,
+textarea {
+  @apply w-full border border-slate-700 bg-slate-800 text-white rounded-xl p-4 outline-none;
 }
 
-/* ========================================
-   FOOTER
-======================================== */
-.footer {
-  background: #111;
-  color: #bbb;
-  text-align: center;
-  padding: 60px 10%;
-}
-.footer p {
-  margin-bottom: 10px;
-}
-.footer-links a {
-  color: #bbb;
-  margin: 0 12px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s;
-}
-.footer-links a:hover {
-  color: #fff;
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
 
-/* ========================================
-   SCROLL ANIMATIONS
-======================================== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ===============================
+   Utility Classes
+================================== */
+.text-glow {
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
 }
 
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
-@media (max-width: 1024px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-img {
-    margin-top: 50px;
-  }
+.border-gradient {
+  border-image: linear-gradient(90deg, #3b82f6, #06b6d4) 1;
 }
 
+.bg-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+/* ===============================
+   Responsive Adjustments
+================================== */
 @media (max-width: 768px) {
-  section {
-    padding: 70px 6%;
+  h1, h2 {
+    line-height: 1.2;
   }
-  .hero h1 {
-    font-size: 2.4rem;
+
+  .gradient-text {
+    font-size: 1.2em;
   }
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-  .testimonial-grid {
-    flex-direction: column;
-    align-items: center;
+
+  .card {
+    padding: 1.5rem;
   }
 }
