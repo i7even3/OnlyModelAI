@@ -50,8 +50,34 @@ body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;
 @media(max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.nav-links{display:none}.nav-toggle{display:block}.hero-inner{grid-template-columns:1fr;gap:20px}.hero-title{font-size:28px}}
 .card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 10px 30px rgba(2,6,23,0.05);border:1px solid rgba(7,26,59,0.04)}
-.testimonial .avatar{width:64px;height:64px;border-radius:999px;object-fit:cover}
-.avatar{width:64px;height:64px;border-radius:999px;object-fit:cover}
+.testimonial .avatar{
+  width:64px;
+  height:64px;
+  border-radius:999px;
+  /* Align the testimonial avatars with our new design: solid background, centered initial */
+  background-color: var(--accent1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.avatar{
+  width:64px;
+  height:64px;
+  border-radius:999px;
+  /* Use a solid background and centered initial for a cohesive testimonial avatar */
+  background-color: var(--accent1);
+  color: #ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:20px;
+  text-transform:uppercase;
+}
 .muted{color:var(--muted)}
 .footer{padding:28px 0;background:linear-gradient(180deg,rgba(248,241,231,0.92),rgba(248,241,231,0.96));color:var(--text)}
 .footer-inner{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
