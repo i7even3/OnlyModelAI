@@ -103,3 +103,9 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:4px solid r
 .pricing-comparison tbody tr:last-child td {
   border-bottom: none;
 }
+
+/* Bold the feature names and left-align them for better readability */
+.pricing-comparison tbody td:first-child {
+  font-weight: 600;
+  text-align: left;
+}
