@@ -13,7 +13,8 @@
   --accent2: #9e7c55; /* complementary accent */
   --cta1: #c7a17a; /* call-to-action gradient start */
   --cta2: #a87e53; /* call-to-action gradient end */
-  --card: #ffffff;
+  /* Card surfaces use a light beige instead of pure white to soften the contrast against the page background */
+  --card: #f8f1e7;
   --radius: 14px;
 }
 *{box-sizing:border-box}
@@ -72,4 +73,33 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:4px solid r
   margin-top:8px;
   font-weight:600;
   color:var(--muted);
+}
+
+/* Pricing comparison table styles */
+/* Improve readability and cohesion of the comparison table. By default tables have a stark white background and
+   minimal styling. Here we align it with the beige colour palette, add subtle separators and ensure the
+   content is centred. */
+.pricing-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.pricing-comparison th,
+.pricing-comparison td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--page-bg);
+  text-align: center;
+  color: var(--text);
+  font-weight: 500;
+}
+.pricing-comparison thead th {
+  background-color: var(--page-bg);
+  font-weight: 700;
+  text-align: center;
+}
+.pricing-comparison tbody tr:last-child td {
+  border-bottom: none;
 }
